@@ -10,21 +10,21 @@ Write-Host "  Genera HTML da Jupyter Notebooks" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
-# Verifica installazione jupyter nbconvert
-Write-Host "Verifico installazione jupyter nbconvert..." -ForegroundColor Yellow
-$nbconvertCheck = & python -m jupyter nbconvert --version 2>$null
+# Verifica installazione nbconvert
+Write-Host "Verifico installazione nbconvert..." -ForegroundColor Yellow
+$nbconvertCheck = & python -m nbconvert --version 2>$null
 
-if (-not $nbconvertCheck) {
-    Write-Host "❌ jupyter nbconvert non trovato!" -ForegroundColor Red
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "❌ nbconvert non trovato!" -ForegroundColor Red
     Write-Host ""
     Write-Host "Installazione necessaria:" -ForegroundColor Yellow
-    Write-Host "  pip install jupyter nbconvert" -ForegroundColor White
+    Write-Host "  pip install nbconvert" -ForegroundColor White
     Write-Host ""
     $install = Read-Host "Vuoi installarlo ora? (s/n)"
 
     if ($install -eq 's') {
         Write-Host "Installazione in corso..." -ForegroundColor Yellow
-        & python -m pip install jupyter nbconvert
+        & python -m pip install nbconvert
         if ($LASTEXITCODE -ne 0) {
             Write-Host "❌ Installazione fallita!" -ForegroundColor Red
             exit 1
@@ -36,7 +36,7 @@ if (-not $nbconvertCheck) {
     }
 }
 
-Write-Host "✅ jupyter nbconvert trovato!" -ForegroundColor Green
+Write-Host "✅ nbconvert installato e funzionante!" -ForegroundColor Green
 Write-Host ""
 
 # Trova tutti i notebook nel progetto
@@ -70,11 +70,10 @@ foreach ($notebook in $notebooks) {
 
     try {
         # Esegui conversione con template completo
-        & python -m jupyter nbconvert --to html `
+        $result = & python -m nbconvert --to html `
             --template classic `
             --embed-images `
-            "$($notebook.FullName)" `
-            --output "$outputHtml" 2>&1 | Out-Null
+            "$($notebook.FullName)" 2>&1
 
         if ($LASTEXITCODE -eq 0 -and (Test-Path $outputHtml)) {
             $dimensione = (Get-Item $outputHtml).Length / 1KB
@@ -82,6 +81,7 @@ foreach ($notebook in $notebooks) {
             $convertiti++
         } else {
             Write-Host "   ❌ Errore durante la conversione" -ForegroundColor Red
+            Write-Host "   Dettaglio: $result" -ForegroundColor Gray
             $errori++
         }
     }

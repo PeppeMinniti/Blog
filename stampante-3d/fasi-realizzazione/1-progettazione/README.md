@@ -36,8 +36,13 @@ Analisi completa con calcoli parametrici, grafici e confronti.
 jupyter notebook calcoli-strutturali.ipynb
 ```
 
-### 📄 calcoli-strutturali.html (se disponibile)
-Versione HTML statica del notebook per visualizzazione rapida senza eseguire codice.
+### 📄 [calcoli-strutturali.html](calcoli-strutturali.html) ✅ Disponibile
+
+Versione HTML statica del notebook (387 KB) per visualizzazione rapida senza eseguire codice.
+
+- Apri direttamente nel browser
+- Tutti i calcoli pre-eseguiti
+- Grafici e tabelle già renderizzati
 
 ---
 
