@@ -21,9 +21,9 @@ Aspetti da considerare:
 <!-- Esempio: -->
 <!-- ![Schema struttura](../../media/struttura-schema.jpg) -->
 
-## Calcoli e Dimensionamenti (roba da ingegneri) <img src="../../../assets/images/dizzy-emoji.png" alt="dizzy emoji" width="35" style="vertical-align: middle;">
+## Calcoli e Dimensionamenti  
 
-> 📓 **Notebook Interattivo - Esegui nel Browser (Gratuito):**
+> 📓 **Notebook Interattivo - Esegui nel Browser (Gratuito):  (roba da ingegneri) <img src="../../../assets/images/dizzy-emoji.png" alt="dizzy emoji" width="35" style="vertical-align: middle;">**
 >
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PeppeMinniti/Blog/blob/main/stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb)
 > [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PeppeMinniti/Blog/HEAD?filepath=stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb)
