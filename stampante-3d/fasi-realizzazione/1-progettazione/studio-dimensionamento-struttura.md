@@ -65,8 +65,8 @@ print(f"Limite L/500: {L/500:.2f} mm")
 |-----------|--------|------|
 | Volume stampa | 900×740×800mm | XYZ |
 | Profili principali | 40x20x2mm | Acciaio |
-| Altezza totale | ~1200mm | Circa |
-| Ingombro base | ~1000×850mm | Circa |
+| Altezza totale | ~1100mm | Circa |
+| Ingombro base | ~1080×1000mm | Circa |
 
 ## Note
 
@@ -83,4 +83,4 @@ print(f"Limite L/500: {L/500:.2f} mm")
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[← Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)

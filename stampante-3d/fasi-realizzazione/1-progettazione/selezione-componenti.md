@@ -28,7 +28,7 @@ Scheda madre: BIGTREETECH Octopus Pro V1.1
 MCU: STM32H723XX
 Driver X/Estrusore: TMC 2209 v.3
 Driver Y/Z: DM556 20-50V 5.6A
-Host: Raspberry Pi 3/4
+Host: Raspberry Pi 4/5
 ```
 
 ### Motori
@@ -37,16 +37,20 @@ Assi Y/Z: 6× NEMA 23 (3.0Nm, 4.2A)
 Asse X/Estrusore: 2× NEMA 17 (59Ncm, 2.0A)
 ```
 
-### Meccanica
-- Guide MGN20H: 4 guide 1000mm + 4 carrelli
-- Guide MGN12: 2 guide 1000mm + 2 carrelli
-- Cinghie GT2: 6mm (X), 10mm (Y)
-- Viti a ricircolo: TR16x5 (Z)
+### Meccanica  
+```yaml
+Guide MGN20H: 4 guide 1000mm + 4 carrelli
+Guide MGN12: 2 guide 1000mm + 2 carrelli
+Cinghie GT2: 6mm (X), 10mm (Y)
+Viti a ricircolo: TR16x5 (Z)
+```
 
 ### Riscaldamento
-- Hotend: All-metal 300°C max
-- Piatto: 9× riscaldatori 200W
-- Vetro temperato: 900×900×10mm
+```yaml
+Hotend: All-metal 300°C max
+Piatto: 9× riscaldatori 200W
+Vetro temperato: 900×900×10mm
+```
 
 ## Criteri di Selezione
 
