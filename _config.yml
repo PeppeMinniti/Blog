@@ -1,0 +1,50 @@
+# Configurazione Jekyll per GitHub Pages
+
+# Informazioni sito
+title: "Peppe Minniti - Portfolio Progetti Automazione"
+description: "Maker, Developer & Automation Engineer* - Portfolio progetti elettronica, CNC, stampanti 3D e automazione"
+author: "Peppe Minniti"
+email: "peppe.minniti@gmail.com"
+
+# URL del sito
+url: "https://peppeminniti.github.io"
+baseurl: "/Blog"
+
+# Tema GitHub Pages
+# Usiamo solo CSS custom (style.scss) senza tema base
+# theme: minima  # Opzionale: decommentare per avere base minima
+
+# Plugin
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# File da escludere
+exclude:
+  - COMANDI_GIT.txt
+  - GUIDA_PROSSIMI_PASSI.md
+  - CLAUDE.md
+  - istruzioni.txt
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - "*.tmp"
+  - "*.bak"
+  - "ffmpeg/"
+
+# Configurazione SEO
+social:
+  name: Peppe Minniti
+  links:
+    - https://www.linkedin.com/in/giuseppe-minniti-m2m-fablab
+    - https://github.com/PeppeMinniti
+    - https://www.instagram.com/peppe_minniti/
+
+# Google Analytics (opzionale - aggiungi dopo)
+# google_analytics: UA-XXXXXXXXX-X

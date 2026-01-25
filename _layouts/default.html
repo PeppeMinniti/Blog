@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Favicon (aggiungi dopo se vuoi) -->
+  <!-- <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.png"> -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  {% seo %}
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="main-nav">
+        <div class="nav-brand">
+          <a href="{{ site.baseurl }}/">
+            <strong>⚡ {{ site.author }}</strong>
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="{{ site.baseurl }}/">Portfolio</a>
+          <a href="{{ site.baseurl }}/about">Chi Sono</a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/giuseppe-minniti-m2m-fablab" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contatti</h3>
+          <p>
+            📧 <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+            💼 <a href="https://www.linkedin.com/in/giuseppe-minniti-m2m-fablab" target="_blank" rel="noopener">LinkedIn</a><br>
+            🐙 <a href="https://github.com/PeppeMinniti" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Progetti</h3>
+          <p>
+            <a href="{{ site.baseurl }}/stampante-3d/">Stampante 3D</a><br>
+            <a href="{{ site.baseurl }}/CNC/">CNC 5 Assi</a><br>
+            <a href="{{ site.baseurl }}/">Tutti i progetti →</a>
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Info</h3>
+          <p>
+            <a href="{{ site.baseurl }}/about">Chi Sono</a><br>
+            <a href="{{ site.baseurl }}/#servizi">Servizi</a><br>
+            <a href="https://github.com/PeppeMinniti/Blog" target="_blank" rel="noopener">Codice Sorgente</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; {{ 'now' | date: "%Y" }} {{ site.author }} - Maker, Developer & Automation Engineer*
+        </p>
+        <p style="font-size: 0.9em; color: var(--text-tertiary);">
+          Realizzato con ⚡ e GitHub Pages
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Analytics (opzionale) -->
+  {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+  {% endif %}
+
+  <style>
+    /* Stili Header/Nav */
+    .site-header {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-primary);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .nav-brand a {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: var(--accent-primary) !important;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-primary) !important;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary) !important;
+      background-color: var(--bg-hover);
+    }
+
+    /* Main content spacing */
+    .main-content {
+      min-height: calc(100vh - 300px);
+      padding: 40px 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--bg-secondary);
+      border-top: 2px solid var(--border-primary);
+      margin-top: 60px;
+      padding: 40px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-section h3 {
+      color: var(--accent-primary);
+      font-size: 1.1em;
+      margin-bottom: 12px;
+      border-bottom: none;
+    }
+
+    .footer-section p {
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    .footer-section a {
+      color: var(--text-primary) !important;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      color: var(--accent-primary) !important;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-primary);
+      color: var(--text-secondary);
+    }
+
+    .footer-bottom p {
+      margin: 8px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* Animazione smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Back to top button (opzionale) */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background-color: var(--accent-primary);
+      color: var(--bg-primary);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--accent-secondary);
+      transform: translateY(-4px);
+    }
+  </style>
+
+  <!-- Back to top button script -->
+  <script>
+    // Mostra/nascondi pulsante back to top
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (backToTop) {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }
+    });
+  </script>
+
+  <!-- Back to top button (opzionale) -->
+  <a href="#" class="back-to-top" title="Torna su">↑</a>
+
+  <!-- Lightbox Script -->
+  <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
+
+</body>
+</html>

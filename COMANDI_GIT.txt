@@ -1,0 +1,44 @@
+# COMANDI GIT PER CARICARE IL PORTFOLIO
+# Copia e incolla questi comandi uno alla volta nel terminale
+
+# 1. Inizializza repository Git nella cartella
+git init
+
+# 2. Aggiungi tutti i file (rispetterà .gitignore)
+git add .
+
+# 3. Verifica cosa verrà committato (opzionale, per controllo)
+git status
+
+# 4. Crea il primo commit
+git commit -m "Initial commit: Portfolio con tema scuro e Jekyll configuration"
+
+# 5. Rinomina branch in 'main' (standard moderno)
+git branch -M main
+
+# 6. Collega al repository remoto GitHub
+# IMPORTANTE: Sostituisci USERNAME con il tuo username GitHub (probabilmente PeppeMinniti)
+git remote add origin https://github.com/PeppeMinniti/Blog.git
+
+# 7. Carica tutto su GitHub
+git push -u origin main
+
+# FATTO! I tuoi file sono ora su GitHub.
+
+# ============================================
+# COMANDI UTILI PER IL FUTURO
+# ============================================
+
+# Quando modifichi file in futuro, usa questi 3 comandi:
+# git add .
+# git commit -m "Descrizione delle modifiche"
+# git push
+
+# Per vedere lo stato attuale:
+# git status
+
+# Per vedere la storia dei commit:
+# git log --oneline
+
+# Per scaricare eventuali modifiche dal server:
+# git pull

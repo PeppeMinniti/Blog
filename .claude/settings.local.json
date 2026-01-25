@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(git mv:*)",
+      "Bash(powershell -Command \"Rename-Item -Path ''Plotter verticale'' -NewName ''plotter-verticale''\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(find:*)"
+    ]
+  }
+}
