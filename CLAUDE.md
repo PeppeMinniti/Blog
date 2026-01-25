@@ -397,11 +397,31 @@ Tutti i progetti hanno ora una pagina placeholder professionale:
 - ✅ Meccanica e assemblaggio
 
 **Progetti Maggiori Realizzati:**
-1. Stampante 3D grandi dimensioni (900×740×800mm)
+1. Stampante 3D grandi dimensioni (Area stampa: 900×740×800mm, Struttura: 1080×1000×1100mm)
 2. Fresa CNC 5 assi
 3. Fresa CNC 3 assi grandi dimensioni
 4. Plotter verticale
 5. ~50 progetti vari in automazione
+
+**Parametri Tecnici Stampante 3D (Riferimento Rapido):**
+- **Dimensioni:**
+  - Area stampa utile: 900×740×800mm (X×Y×Z)
+  - Struttura: 1080×1000×1100mm (X×Y×Z)
+  - Profili: 40×20×2mm acciaio S235
+- **Cinematica:**
+  - Asse Z: Piatto riscaldato 30 kg mobile verticalmente (4 × NEMA23)
+    - Vetro temperato 900×900×10mm: 20 kg
+    - Piatto alluminio 900×900×4mm + 9 riscaldatori: 10 kg
+  - Asse X: Testina + estrusore 1 kg mobile orizzontalmente (binario 1080mm)
+  - Asse Y: Binari NGM20H fissi (1000mm) - la testina scorre su questi
+- **Accelerazioni:**
+  - Asse X (testina leggera): 5000 mm/s²
+  - Asse Z (piatto pesante): 500 mm/s²
+- **Elettronica:**
+  - BIGTREETECH Octopus Pro V1.1
+  - MCU: STM32H723
+  - Firmware: Klipper + Mainsail
+  - BLTouch per auto-leveling
 
 **Situazione Attuale:**
 - Ha materiale multimediale (foto/video) per molti progetti
@@ -662,6 +682,47 @@ appunti_privati.txt
 
 **Nota:** Gli utenti web possono eseguire i notebook gratuitamente su Colab/Binder senza installare nulla.
 
+### 2026-01-25 - Correzione Critica Notebook (Parametri Reali Stampante)
+
+**⚠️ CORREZIONE IMPORTANTE:** Il notebook originale conteneva errori gravi nei parametri. È stato completamente riscritto.
+
+**Errori corretti:**
+- ❌ Massa piatto: 15 kg → ✅ **30 kg** (vetro 20kg + alluminio/riscaldatori 10kg)
+- ❌ Massa testina: 2 kg → ✅ **1 kg** (estrusore + hotend)
+- ❌ Dimensioni generiche → ✅ **Struttura: 1080×1000×1100mm** (vs area stampa 900×740×800mm)
+- ❌ Cinematica errata (piatto su asse X) → ✅ **Cinematica corretta:**
+  - **Asse Z**: Piatto 30 kg mobile verticalmente (4 × NEMA23)
+  - **Asse X**: Testina 1 kg mobile orizzontalmente (1080mm)
+  - **Asse Y**: Binari NGM20H **fissi** (1000mm)
+- ❌ Accelerazioni uniformi → ✅ **Differenziate realisticamente:**
+  - Asse X (testina leggera): 5000 mm/s²
+  - Asse Z (piatto pesante): 500 mm/s²
+
+**Nuove analisi aggiunte:**
+1. ✅ **Analisi Asse X** (trave 1080mm, testina 1kg)
+2. ✅ **Analisi Asse Y** (trave 1000mm, binari fissi + testina)
+3. ✅ **Analisi Asse Z** (montanti verticali 1100mm, piatto 30kg)
+   - Verifica carico di punta (formula di Eulero)
+   - Coefficiente sicurezza instabilità
+   - Flessione laterale da vibrazioni
+4. ✅ **Frequenze di risonanza** per tutti e 3 gli assi
+5. ✅ **Grafici comparativi** (4 subplot: flessione X, Y, massa, carico critico Z)
+6. ✅ **Grafico parametrico** flessione vs accelerazione
+7. ✅ **Schema ASCII cinematica** nella documentazione finale
+
+**Struttura notebook finale (9 sezioni):**
+1. Parametri stampante (dimensioni + masse dettagliate)
+2. Calcolo momento di inerzia profilo 40×20×2mm
+3. Analisi asse X - Trave 1080mm (testina)
+4. Analisi asse Y - Trave 1000mm (binari)
+5. Analisi asse Z - Montanti 1100mm (piatto 30kg)
+6. Frequenze di risonanza (verifica vs freq. motori)
+7. Confronto profili alternativi (6 profili)
+8. Grafico parametrico accelerazione
+9. Riepilogo finale con dashboard completo
+
+**Impatto:** Il notebook ora riflette la configurazione reale della stampante con calcoli corretti per ogni asse.
+
 ### TODO: Prossimi milestone
 - [ ] YYYY-MM-DD - Primo deploy GitHub Pages
 - [ ] YYYY-MM-DD - Documentazione completa progetti principali
@@ -694,8 +755,12 @@ appunti_privati.txt
 
 **Notebook Interattivi:**
 - `requirements.txt` - Dipendenze Python per Jupyter (numpy, matplotlib, pandas)
-- `stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb` - Calcoli strutturali interattivi
-- Badge Colab/Binder nei file markdown per esecuzione browser
+- `stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb` - Calcoli strutturali completi (9 sezioni)
+  - Configurazione: Struttura 1080×1000×1100mm, Area stampa 900×740×800mm
+  - Cinematica: Piatto 30kg su Z, Testina 1kg su X, Binari Y fissi
+  - Analisi: Flessione 3 assi, Frequenze risonanza, Confronto profili, Carico di punta
+- `stampante-3d/fasi-realizzazione/1-progettazione/README.md` - Guida notebook e badge Colab/Binder
+- Badge Colab/Binder in markdown per esecuzione browser (no installazione)
 
 **Blog e Content:**
 - `blog/README.md` - Linee guida articoli e idee
@@ -769,9 +834,16 @@ git push
 - Script automazione riutilizzabile
 
 **Contenuti:**
-- 1 progetto documentato completamente (stampante-3d)
+- 1 progetto documentato completamente (stampante-3d) + notebook Jupyter interattivo
+- Notebook calcoli strutturali: 9 sezioni, parametri corretti, badge Colab/Binder
 - 11 pagine WIP professionali create
 - Tutti i contatti personalizzati
+
+**Strumenti Analisi:**
+- Notebook Jupyter interattivo con calcoli strutturali completi
+- Analisi 3 assi (X: 1080mm, Y: 1000mm, Z: 1100mm)
+- Cinematica corretta: Piatto 30kg su Z, Testina 1kg su X, Binari Y fissi
+- Verifiche: Flessione, Frequenze risonanza, Carico di punta, Confronto profili
 
 ### 🎯 PROSSIMA AZIONE IMMEDIATA
 
@@ -811,5 +883,5 @@ git push
 ---
 
 *File mantenuto aggiornato per preservare context tra sessioni*
-*Ultima modifica: 2026-01-24*
-*Status: Portfolio pronto per deploy GitHub Pages*
+*Ultima modifica: 2026-01-25*
+*Status: Portfolio pronto per deploy + Notebook strutturali con parametri corretti*

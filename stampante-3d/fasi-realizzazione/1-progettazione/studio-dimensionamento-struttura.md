@@ -47,16 +47,6 @@ print(f"Flessione massima: {flessione:.2f} mm")
 
 **Risultato**: La flessione massima è di **2.92 mm**, entro i limiti accettabili per una trave di 900mm (limite tipico: L/500 = 1.8mm).
 
-Per analisi complete con:
-
-- Calcolo momento di inerzia preciso
-- Analisi parametrica carico vs flessione
-- Frequenze di risonanza
-- Confronto profili alternativi
-- Grafici interattivi
-
-**→ Usa il notebook interattivo** [calcoli-strutturali.ipynb](calcoli-strutturali.ipynb)
-
 ## Specifiche Struttura
 
 | Parametro | Valore | Note |
