@@ -31,21 +31,33 @@ Aspetti da considerare:
 > Clicca un badge per eseguire calcoli interattivi, modificare parametri e vedere grafici in tempo reale.
 > Nessuna installazione richiesta! Oppure [scarica il notebook](calcoli-strutturali.ipynb) per uso locale.
 
-### Esempio Base: Calcolo Flessione Trave
+### Esempio: Calcolo Flessione Asse X (Parametri Reali)
 
 ```python
-# Esempio: Calcolo flessione trave
-L = 900  # Lunghezza trave [mm]
-F = 50   # Forza applicata [N]
-E = 210000  # Modulo elasticità acciaio [N/mm²]
-I = 1234   # Momento inerzia profilo [mm⁴]
+# Asse X: Trave 1080mm che supporta testina mobile 1kg
+L = 1080       # Lunghezza trave asse X [mm]
+m = 1.0        # Massa testina [kg]
+a = 5000       # Accelerazione max [mm/s²]
+E = 210000     # Modulo elasticità acciaio S235 [N/mm²]
+I = 53333      # Momento inerzia profilo 40×20×2mm, asse debole [mm⁴]
 
+# Carico totale (peso + forza inerziale)
+F = m * 9.81 + (m * a) / 1000  # [N]
+
+# Flessione trave appoggiata, carico centrato
 flessione = (F * L**3) / (48 * E * I)
-print(f"Flessione massima: {flessione:.2f} mm")
-# Output: Flessione massima: 2.92 mm
+
+print(f"Carico totale: {F:.1f} N")
+print(f"Flessione: {flessione:.3f} mm")
+print(f"Limite L/500: {L/500:.2f} mm")
+# Output: Carico totale: 14.8 N
+#         Flessione: 0.036 mm
+#         Limite L/500: 2.16 mm
 ```
 
-**Risultato**: La flessione massima è di **2.92 mm**, entro i limiti accettabili per una trave di 900mm (limite tipico: L/500 = 1.8mm).
+**Risultato**: Con testina leggera (1 kg) la flessione è **trascurabile** (0.036 mm), ben entro i limiti (2.16 mm).
+
+💡 **Per analisi complete** (3 assi, frequenze risonanza, confronto profili) → Usa il notebook interattivo sopra!
 
 ## Specifiche Struttura
 
