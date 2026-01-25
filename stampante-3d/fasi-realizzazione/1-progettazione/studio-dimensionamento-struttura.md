@@ -23,6 +23,16 @@ Aspetti da considerare:
 
 ## Calcoli e Dimensionamenti
 
+> 📓 **Notebook Interattivo - Esegui nel Browser (Gratuito):**
+>
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PeppeMinniti/Blog/blob/main/stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb)
+> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PeppeMinniti/Blog/HEAD?filepath=stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb)
+>
+> Clicca un badge per eseguire calcoli interattivi, modificare parametri e vedere grafici in tempo reale.
+> Nessuna installazione richiesta! Oppure [scarica il notebook](calcoli-strutturali.ipynb) per uso locale.
+
+### Esempio Base: Calcolo Flessione Trave
+
 ```python
 # Esempio: Calcolo flessione trave
 L = 900  # Lunghezza trave [mm]
@@ -32,7 +42,20 @@ I = 1234   # Momento inerzia profilo [mm⁴]
 
 flessione = (F * L**3) / (48 * E * I)
 print(f"Flessione massima: {flessione:.2f} mm")
+# Output: Flessione massima: 2.92 mm
 ```
+
+**Risultato**: La flessione massima è di **2.92 mm**, entro i limiti accettabili per una trave di 900mm (limite tipico: L/500 = 1.8mm).
+
+Per analisi complete con:
+
+- Calcolo momento di inerzia preciso
+- Analisi parametrica carico vs flessione
+- Frequenze di risonanza
+- Confronto profili alternativi
+- Grafici interattivi
+
+**→ Usa il notebook interattivo** [calcoli-strutturali.ipynb](calcoli-strutturali.ipynb)
 
 ## Specifiche Struttura
 

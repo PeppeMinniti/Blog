@@ -642,6 +642,26 @@ appunti_privati.txt
 
 **Motivo:** FFmpeg non necessario nel repository (i 19 poster sono già stati creati)
 
+### 2026-01-25 - Notebook Jupyter Interattivi
+
+- ✅ Creato primo Jupyter Notebook: `calcoli-strutturali.ipynb`
+- ✅ 7 sezioni complete con analisi parametriche e grafici
+- ✅ Badge Google Colab + Binder per esecuzione nel browser
+- ✅ Script `genera_html_notebooks.ps1` per export HTML statico
+- ✅ File `requirements.txt` per dipendenze Python
+- ✅ README dedicato nella cartella progettazione
+- ✅ Aggiornato `studio-dimensionamento-struttura.md` con link interattivi
+
+**Funzionalità Notebook:**
+1. Calcolo momento di inerzia profili
+2. Analisi flessione con grafici parametrici
+3. Frequenze di risonanza
+4. Carichi reali stampante (masse + inerzia)
+5. Confronto profili alternativi (tabella + grafici)
+6. Dashboard riepilogo completo
+
+**Nota:** Gli utenti web possono eseguire i notebook gratuitamente su Colab/Binder senza installare nulla.
+
 ### TODO: Prossimi milestone
 - [ ] YYYY-MM-DD - Primo deploy GitHub Pages
 - [ ] YYYY-MM-DD - Documentazione completa progetti principali
@@ -667,10 +687,15 @@ appunti_privati.txt
 - `.gitignore` - File da escludere da Git
 
 **Automazione:**
-
 - `crea_tutti_poster.ps1` - Script creazione poster da video (richiede FFmpeg)
 - `installa_ffmpeg_portatile.ps1` - Installazione FFmpeg (opzionale, 296 MB)
+- `genera_html_notebooks.ps1` - Converte notebook Jupyter in HTML statico
 - ⚠️ FFmpeg non più incluso nel repository (usare script installazione se necessario)
+
+**Notebook Interattivi:**
+- `requirements.txt` - Dipendenze Python per Jupyter (numpy, matplotlib, pandas)
+- `stampante-3d/fasi-realizzazione/1-progettazione/calcoli-strutturali.ipynb` - Calcoli strutturali interattivi
+- Badge Colab/Binder nei file markdown per esecuzione browser
 
 **Blog e Content:**
 - `blog/README.md` - Linee guida articoli e idee
