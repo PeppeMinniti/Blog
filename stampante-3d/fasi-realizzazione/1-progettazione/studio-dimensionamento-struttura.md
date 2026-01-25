@@ -21,7 +21,7 @@ Aspetti da considerare:
 <!-- Esempio: -->
 <!-- ![Schema struttura](../../media/struttura-schema.jpg) -->
 
-## Calcoli e Dimensionamenti
+## Calcoli e Dimensionamenti (roba da ingegneri) <img src="../../../assets/images/dizzy-emoji.png" alt="dizzy emoji" width="35" style="vertical-align: middle;">
 
 > 📓 **Notebook Interattivo - Esegui nel Browser (Gratuito):**
 >
