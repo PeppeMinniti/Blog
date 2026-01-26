@@ -6,9 +6,8 @@ title: "Selezione Componenti"
 
 ## Descrizione
 
-Fase cruciale in cui vengono selezionati tutti i componenti necessari per la realizzazione della stampante, bilanciando prestazioni, costi e disponibilità.
+Fase cruciale in cui vengono selezionati tutti i componenti necessari per la realizzazione della stampante, bilanciando prestazioni, costi e disponibilità. I componenti di seguito mostrati sono solo alcune delle scelte possibili, sentiti libero di cambiarli a piacimento, ma fai anche in modo di poterli adattare meccanicamente e elettronicamente agli altri componenti.
 
-Categorie principali:
 - Elettronica di controllo
 - Motori stepper
 - Guide lineari e trasmissioni
