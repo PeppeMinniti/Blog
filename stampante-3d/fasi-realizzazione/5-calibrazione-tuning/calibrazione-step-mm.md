@@ -142,7 +142,7 @@ Procedura:
   6. Calcolare rotation_distance
 
 Attenzione:
-  - Asse Z usa viti a ricircolo TR16×5
+  - Asse Z usa viti a ricircolo SFU1605
   - rotation_distance teorico = 5mm (passo vite)
   - Errore tipico < 0.5% (viti precisione C7)
 
@@ -361,7 +361,6 @@ Viti metriche:
   - TR8×2: 2mm
   - TR8×4: 4mm
   - TR8×8: 8mm
-  - TR16×5: 5mm (viti a ricircolo stampante 3D)
 
 Estrusori:
   - BMG clone: 7.5-8.5mm (variabile, CALIBRARE!)

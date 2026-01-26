@@ -33,7 +33,7 @@ Le stampanti 3D commerciali di grandi dimensioni hanno costi proibitivi (5.000-1
 - **Area di stampa:** 900mm (X) × 740mm (Y) × 800mm (Z)
 - **Trasmissione X:** Cinghia GT2 (6mm) rotation distance 80mm
 - **Trasmissione Y:** Cinghie GT2 (10mm) con rapporto 2:1, rotation distance 40mm
-- **Trasmissione Z:** Viti a ricircolo TR16x5, rotation distance 5mm
+- **Trasmissione Z:** Viti a ricircolo SFU1605, rotation distance 5mm
 - **Velocità massima:** 500 mm/s
 - **Accelerazione:** 1000 mm/s²
 

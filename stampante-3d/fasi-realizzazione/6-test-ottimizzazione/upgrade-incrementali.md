@@ -58,7 +58,7 @@ Upgrade:
 
 Componenti:
   - 1× NEMA23 motore Z extra
-  - 1× Vite TR16×5 (900mm)
+  - 1× Vite SFU1605 (900mm)
   - Driver stepper extra
   - Giunto elastico
   - Supporti custom

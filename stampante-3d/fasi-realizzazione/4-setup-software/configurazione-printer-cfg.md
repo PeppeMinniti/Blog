@@ -180,7 +180,7 @@ homing_speed: 40
 # Più lento per asse pesante
 ```
 
-### Stepper Z (NEMA 23, viti TR16×5, driver DM556)
+### Stepper Z (NEMA 23, viti SFU1605, driver DM556)
 
 ```ini
 [stepper_z]
@@ -191,7 +191,7 @@ enable_pin: !PG5
 microsteps: 32
 
 rotation_distance: 5
-# Vite a ricircolo TR16×5 = 5mm/rotazione
+# Vite a ricircolo SFU1605 = 5mm/rotazione
 
 endstop_pin: probe:z_virtual_endstop
 # Usa BLTouch come endstop virtuale

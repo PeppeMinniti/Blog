@@ -11,13 +11,15 @@ Installazione dei sistemi di trasmissione per il movimento degli assi: cinghie G
 Sistemi utilizzati:
 - **Asse X:** Cinghia GT2 6mm, rotation distance 80mm
 - **Asse Y:** Cinghie GT2 10mm con rapporto 2:1, rotation distance 40mm
-- **Asse Z:** Viti TR16×5, rotation distance 5mm
+- **Asse Z:** Viti SFU1605, rotation distance 5mm
 
 ## Immagini
 
-<!-- Inserire foto trasmissioni -->
-<!-- ![Cinghia GT2](../../media/costruzione/cinghia-gt2.jpg) -->
-<!-- ![Viti Z](../../media/costruzione/viti-z.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/cinghia-gt2-10.jpg" alt="cinghia gt2 10mm" class="project-thumbnail">
+  <img src="../media/cinghia-gt2-6.jpg" alt="cinghia gt2 6mm" class="project-thumbnail">
+  <img src="../media/sfu1605.jpg" alt="sfu1605" class="project-thumbnail">
+</div>
 
 ## Trasmissione Asse X (Cinghia Singola)
 
@@ -27,9 +29,9 @@ Sistemi utilizzati:
 Cinghia: GT2 6mm, passo 2mm
 Pulegge:
   - Motrice: 20 denti (albero motore)
-  - Rinvio: 20 denti (lato opposto)
-Tensionatore: A molla o vite
-Lunghezza cinghia: ~2500mm (loop chiuso)
+  - Rinvio: 20 denti (lato opposto - anche liscia) 
+Tensionatore: A vite
+Lunghezza cinghia: ~2300mm (non loop chiuso)
 ```
 
 ### Calcolo Rotation Distance
@@ -43,37 +45,23 @@ print(f"Rotation distance X: {rotation_distance} mm")
 # Output: 80mm (valore configurato in Klipper)
 ```
 
-### Tensionamento
+## Trasmissione Asse Y (Doppia Cinghia 1:1)
 
-```
-Tensione corretta:
-  - Freccia al centro: 3-5mm con pressione dito
-  - Suono: "twang" acuto (come corda chitarra)
-  - Nessun saltamento denti sotto carico
-```
-
-## Trasmissione Asse Y (Doppia Cinghia 2:1)
-
-### Sistema a Rapporto 2:1
+### Sistema a Rapporto 1:1
 
 ```yaml
-Configurazione: CoreXY modificato
+Configurazione: Cartesiana
 Cinghie: 2× GT2 10mm
-Pulegge motrici: 40 denti (riduzione 2:1)
+Pulegge motrici: 20 denti (albero motore)
 Pulegge folli: 20 denti (rinvio)
-
-Vantaggi rapporto 2:1:
-  - Coppia motore raddoppiata
-  - Precisione aumentata
-  - Velocità dimezzata (ok per asse pesante)
 ```
 
 ### Calcolo Rotation Distance
 
 ```python
-denti_puleggia_motore = 40
+denti_puleggia_motore = 20
 passo_cinghia = 2  # mm
-rapporto = 2  # riduzione 2:1
+rapporto = 1:1
 
 rotation_distance = (denti_puleggia_motore * passo_cinghia) / rapporto
 print(f"Rotation distance Y: {rotation_distance} mm")
@@ -98,10 +86,10 @@ print(f"Rotation distance Y: {rotation_distance} mm")
 ### Specifiche Viti
 
 ```yaml
-Tipo: Vite a ricircolo sfere TR16×5
+Tipo: Vite a ricircolo sfere SFU1605
   - Diametro: 16mm
   - Passo: 5mm (5mm per rotazione)
-  - Lunghezza: 900mm
+  - Lunghezza: 1000mm
   - Precisione: C7 (±0.05mm/300mm)
 
 Dado a ricircolo:
@@ -112,9 +100,9 @@ Dado a ricircolo:
 ### Accoppiamento Motore-Vite
 
 ```yaml
-Giunto: Giunto elastico a soffietto
+Giunto: Coupler 8/10
   - Diametro 1: 8mm (albero NEMA23)
-  - Diametro 2: 16mm (vite)
+  - Diametro 2: 10mm (vite)
   - Lunghezza: 40mm
   - Tolleranza disallineamento: ±0.5mm
 
@@ -132,8 +120,6 @@ rotation_distance = passo_vite
 print(f"Rotation distance Z: {rotation_distance} mm")
 # Output: 5mm (configurato in Klipper)
 ```
-
-## Anti-Backlash e Precisione
 
 ### Eliminazione Gioco
 
@@ -163,13 +149,13 @@ position_max: 900
 [stepper_y]
 step_pin: ...
 microsteps: 64
-rotation_distance: 40  # Doppia cinghia 2:1, puleggia 40T
+rotation_distance: 40  # Doppia cinghia GT2 10mm, puleggia 20T
 position_max: 740
 
 [stepper_z]
 step_pin: ...
 microsteps: 32
-rotation_distance: 5  # Vite TR16×5
+rotation_distance: 5  # Vite SFU1605
 position_max: 800
 ```
 
