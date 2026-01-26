@@ -140,10 +140,11 @@ function initCADViewer(modelUrl) {
             // Il centro del modello ora è a (0, 0, sizeZ/2)
             const modelCenter = new THREE.Vector3(0, 0, sizeZ / 2);
 
-            console.log('DEBUG CAD VIEWER - Bounding box:', bbox);
-            console.log('DEBUG CAD VIEWER - Dimensioni (X,Y,Z):', sizeX, sizeY, sizeZ);
-            console.log('DEBUG CAD VIEWER - Posizione mesh:', mesh.position);
-            console.log('DEBUG CAD VIEWER - Centro modello:', modelCenter);
+            console.log('DEBUG - bbox.min:', bbox.min.x, bbox.min.y, bbox.min.z);
+            console.log('DEBUG - bbox.max:', bbox.max.x, bbox.max.y, bbox.max.z);
+            console.log('DEBUG - Dimensioni (X,Y,Z):', sizeX, sizeY, sizeZ);
+            console.log('DEBUG - Posizione mesh (X,Y,Z):', mesh.position.x, mesh.position.y, mesh.position.z);
+            console.log('DEBUG - Centro modello (X,Y,Z):', modelCenter.x, modelCenter.y, modelCenter.z);
 
             // Scala camera in base a dimensioni dell'oggetto
             const maxDim = Math.max(sizeX, sizeY, sizeZ);
