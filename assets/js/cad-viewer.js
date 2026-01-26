@@ -72,9 +72,7 @@ function initCADViewer(modelUrl) {
     directionalLight2.position.set(-10, -10, -10);
     scene.add(directionalLight2);
 
-    // Griglia
-    const gridHelper = new THREE.GridHelper(20, 20, 0x444444, 0x222222);
-    scene.add(gridHelper);
+    // Griglia - verrà aggiunta dopo il caricamento dell'oggetto
 
     // Controlli orbita
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -133,17 +131,24 @@ function initCADViewer(modelUrl) {
             const box = new THREE.Box3().setFromObject(mesh);
             const size = box.getSize(new THREE.Vector3());
             const maxDim = Math.max(size.x, size.y, size.z);
+
+            // Crea griglia proporzionata all'oggetto (3x dimensione oggetto)
+            const gridSize = maxDim * 3;
+            const gridDivisions = 20;
+            const gridHelper = new THREE.GridHelper(gridSize, gridDivisions, 0x444444, 0x222222);
+            scene.add(gridHelper);
+
             const fov = camera.fov * (Math.PI / 180);
             let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-            cameraZ *= 3.5; // Zoom out per vedere oggetto intero con margine
+            cameraZ *= 2.8; // Distanza iniziale per vedere oggetto completo con margine
 
             // Posiziona camera con angolazione isometrica
-            camera.position.set(cameraZ, cameraZ * 0.8, cameraZ);
+            camera.position.set(cameraZ, cameraZ * 0.7, cameraZ);
             camera.lookAt(0, 0, 0);
 
-            // Aggiorna limiti OrbitControls in base a dimensioni oggetto
-            controls.minDistance = maxDim * 0.5;
-            controls.maxDistance = maxDim * 10;
+            // Aggiorna limiti OrbitControls - ampio range di zoom
+            controls.minDistance = maxDim * 0.2; // Permetti di avvicinarsi
+            controls.maxDistance = maxDim * 50;  // Permetti di allontanarsi molto
             controls.update();
 
             scene.add(mesh);
