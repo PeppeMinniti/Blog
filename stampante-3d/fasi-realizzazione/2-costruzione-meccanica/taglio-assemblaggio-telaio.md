@@ -54,10 +54,6 @@ tolleranza = ±0.1  # mm
 5. Angolari per blocco/allineamento montanti con telaio superiore
 6. Telaio piatto (5 profili)
 7. Verifica allineamento struttura
-<!--
-8. Installazione delle guide lineari per gli assi Y e Z
-9. installazione delle viti a ricircolo di sfere per l'asse Z
--->
 
 ## Attrezzi Necessari
 
