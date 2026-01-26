@@ -40,16 +40,27 @@ Asse X/Estrusore: 2× NEMA 17 (59Ncm, 2.0A)
 ### Meccanica  
 ```yaml
 Guide MGN20H: 4 guide 1000mm + 4 carrelli
-Guide MGN12: 2 guide 1000mm + 2 carrelli
+Guide MGN12H: 2 guide 1000mm + 2 carrelli
 Cinghie GT2: 6mm (X), 10mm (Y)
-Viti a ricircolo: TR16x5 (Z)
+Viti a ricircolo: SFU1605 (Z)
 ```
 
 ### Riscaldamento
+
 ```yaml
 Hotend: All-metal 300°C max
 Piatto: 9× riscaldatori 200W
 Vetro temperato: 900×900×10mm
+```
+
+### Sensori e Sicurezza
+
+```yaml
+Sensore livellamento piatto: Creality Sensore di livellamento automatico CR Touch
+Modulo di Rilevamento Rottura del Filamento: BIGTREETECH Smart Filament Sensor
+Modulo sensore di accelerazione: BIGTREETECH S2DW V1.0 - Klipper
+Endstop (X/Y):  Finecorsa Meccanico con Indicatore LED
+Pulsante di arresto emergenza: GUUZI Interruttore a Pulsante di Arresto di Emergenza in Metallo a Fungo
 ```
 
 ## Criteri di Selezione
@@ -59,7 +70,7 @@ Vetro temperato: 900×900×10mm
 | Scheda madre | Numero assi, espandibilità | Octopus Pro: 8 driver |
 | Motori | Coppia e corrente | NEMA 23 per assi pesanti |
 | Guide lineari | Carico e precisione | MGN20H per carichi elevati |
-| Hotend | Temperatura max | All-metal per materiali tecnici |
+| Hotend | Temperatura max | All-metal per diversi materiali |
 
 ## Budget Componenti
 
