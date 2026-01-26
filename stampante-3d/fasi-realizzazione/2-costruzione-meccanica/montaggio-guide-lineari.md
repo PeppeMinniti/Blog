@@ -14,8 +14,10 @@ Guide utilizzate:
 
 ## Immagini
 
-![Guide MGN20H](../media/guida-mgn20h.jpg)
-![Guide MGN12H](../media/guida-mgn12h.jpg)
+<div class="gallery">
+  <img src="../media/guida-mgn20h.jpg" alt="Guide MGN20H" class="thumbnail">
+  <img src="../media/guida-mgn12h.jpg" alt="Guide MGN12H" class="thumbnail">
+</div>
 
 ## Specifiche Guide
 
