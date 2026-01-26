@@ -723,6 +723,51 @@ appunti_privati.txt
 
 **Impatto:** Il notebook ora riflette la configurazione reale della stampante con calcoli corretti per ogni asse.
 
+### 2026-01-26 - Sistema Viewer CAD 3D STL (Risolto)
+
+**✅ RISOLTO:** Viewer 3D per file STL completamente funzionante dopo debug intensivo.
+
+**Problema iniziale:**
+- Tentativo di convertire DWG → GLTF via CloudConvert API fallito (conversione non supportata)
+- User trovato file STL già disponibili (13 file, 19KB-565KB)
+- Creato sistema viewer con Three.js + STLLoader + OrbitControls
+- **Errore critico:** CDN Three.js non caricavano correttamente ("THREE is not defined", "THREE.OrbitControls is not a constructor")
+- Testati 4 CDN differenti (jsdelivr r160, r149, cdnjs r140, threejs.org) - tutti falliti
+
+**Soluzione implementata:**
+- ✅ Scaricato Three.js r128 localmente in `assets/js/three/` (~625KB totale)
+  - `three.min.js`: 590KB
+  - `OrbitControls.js`: 26KB
+  - `STLLoader.js`: 9.7KB
+- ✅ Modificato `_layouts/default.html` per caricare file locali invece di CDN
+- ✅ Garantito ordine di caricamento corretto (three.min.js → OrbitControls → STLLoader)
+
+**File creati/modificati:**
+- `assets/js/three/three.min.js` - Core library (nuovo)
+- `assets/js/three/OrbitControls.js` - Controlli camera (nuovo)
+- `assets/js/three/STLLoader.js` - Loader STL (nuovo)
+- `_layouts/default.html` - Link CDN → file locali (modificato)
+- `assets/js/cad-viewer.js` - Viewer completo (~220 righe, esistente)
+- `stampante-3d/fasi-realizzazione/1-progettazione/modelli-cad-3d.md` - Pagina gallery con 13 modelli (esistente)
+
+**Funzionalità viewer:**
+- ✅ Click su "🔍 Visualizza 3D" apre modal fullscreen
+- ✅ Rendering STL con materiale blu (#58a6ff) portfolio-branded
+- ✅ OrbitControls: rotazione mouse, zoom, pan
+- ✅ Controlli: Reset vista, Wireframe toggle, Auto-rotazione
+- ✅ Auto-centering e scaling camera in base a dimensioni modello
+- ✅ Loading indicator con progresso percentuale
+- ✅ Luci ambiente + direzionali per rendering realistico
+- ✅ Griglia riferimento 3D
+- ✅ Chiusura con ESC o click fuori modal
+- ✅ Download buttons per STL e DWG
+
+**Impatto:**
+- Portfolio ora ha viewer 3D completamente funzionale senza dipendenze esterne
+- 13 modelli CAD visualizzabili nel browser senza installare software
+- Esperienza utente professionale con controlli intuitivi
+- Nessun problema di CDN/CORS/timing
+
 ### TODO: Prossimi milestone
 - [ ] YYYY-MM-DD - Primo deploy GitHub Pages
 - [ ] YYYY-MM-DD - Documentazione completa progetti principali
@@ -745,6 +790,9 @@ appunti_privati.txt
 **Stili e Script:**
 - `assets/css/style.scss` - Tema scuro custom (~900 righe)
 - `assets/js/lightbox.js` - Sistema lightbox per media
+- `assets/js/cad-viewer.js` - Viewer 3D per modelli STL (~220 righe)
+- `assets/js/three/` - Librerie Three.js r128 locali (625KB totale)
+  - `three.min.js` (590KB), `OrbitControls.js` (26KB), `STLLoader.js` (9.7KB)
 - `.gitignore` - File da escludere da Git
 
 **Automazione:**

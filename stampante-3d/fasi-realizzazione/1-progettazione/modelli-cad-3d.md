@@ -1,32 +1,16 @@
 ---
 layout: default
 title: "Modelli CAD 3D - Stampante 3D Custom"
-description: "Visualizzazione interattiva dei modelli 3D delle parti custom progettate per la stampante 3D da 900mm"
+description: "Download modelli 3D STL e file CAD DWG delle parti custom"
 ---
 
 # 📦 Modelli CAD 3D - Parti Custom
 
-Tutti i componenti meccanici della stampante sono stati progettati in **CAD 3D**. Qui puoi visualizzare i modelli direttamente nel browser con un viewer 3D interattivo.
+Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i modelli interattivi nel browser con il **viewer 3D** oppure scarica i file STL e DWG.
 
 ---
 
-## 🎯 Come Usare il Viewer 3D
-
-<div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent-primary); margin-bottom: 30px;">
-  <h3 style="margin-top: 0; color: var(--accent-primary);">💡 Controlli Viewer</h3>
-  <ul style="line-height: 1.8;">
-    <li><strong>🖱️ Rotazione:</strong> Click sinistro + trascina</li>
-    <li><strong>🔍 Zoom:</strong> Rotella del mouse</li>
-    <li><strong>↔️ Pan (spostamento):</strong> Click destro + trascina</li>
-    <li><strong>🔄 Reset vista:</strong> Pulsante nella barra superiore</li>
-    <li><strong>📐 Wireframe:</strong> Visualizza struttura a fil di ferro</li>
-    <li><strong>🔁 Auto-rotazione:</strong> Rotazione automatica continua</li>
-  </ul>
-</div>
-
----
-
-## 📐 Modelli Disponibili
+## 📥 Download Modelli
 
 <div style="margin-bottom: 40px;">
 
