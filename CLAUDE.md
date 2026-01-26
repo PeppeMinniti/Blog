@@ -858,7 +858,7 @@ git push
 ### Contatti Configurati
 
 ✅ Tutti i contatti sono stati personalizzati:
-- Email: peppeminniti@gmail.com
+- Email: peppe.minniti@gmail.com
 - LinkedIn: giuseppe-minniti-m2m-fablab
 - GitHub: PeppeMinniti
 - Instagram: m2m_fablab

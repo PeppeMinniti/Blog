@@ -6,7 +6,7 @@ description: "Download modelli 3D STL e file CAD DWG delle parti custom"
 
 # 📦 Modelli CAD 3D - Parti Custom
 
-Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i modelli interattivi nel browser con il **viewer 3D** oppure scarica i file STL e DWG.
+Molti dei componenti meccanici della stampante progettati in CAD 3D. Visualizza i modelli interattivi nel browser con il **viewer 3D** oppure scarica i file STL e DWG.
 
 ---
 
@@ -132,7 +132,7 @@ Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i 
     </div>
   </div>
   <p class="cad-model-description">
-    Staffa di montaggio per motore stepper asse Y (lato sinistro). Include fissaggi per puleggia e encoder opzionale.
+    Staffa di montaggio per motore stepper asse Y (lato sinistro). Include fissaggi per puleggia e encoder opzionale. Per ottenere il lato destro basta specchiare l'oggetto.
     File: 80 KB
   </p>
 </div>
@@ -157,7 +157,7 @@ Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i 
     </div>
   </div>
   <p class="cad-model-description">
-    Design migliorato per il supporto dei 4 motori NEMA 23 dell'asse Z. Rinforzi aggiuntivi per sostenere il carico di 30kg del piatto.
+    Design migliorato per il supporto dei 4 motori NEMA 23 dell'asse Z.  
     File: 175 KB
   </p>
 </div>
@@ -282,7 +282,7 @@ Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i 
     </div>
   </div>
   <p class="cad-model-description">
-    Coperchio protettivo custom per l'enclosure della scheda Bigtreetech Octopus Pro. Include fori ventilazione e accesso connettori.
+    Coperchio protettivo custom per l'enclosure della scheda Bigtreetech Octopus Pro. Include fori ventilazione.
     <strong>⚠️ File più grande (565 KB)</strong> - Caricamento può richiedere qualche secondo in più.
   </p>
 </div>
@@ -307,18 +307,18 @@ Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i 
     </div>
   </div>
   <p class="cad-model-description">
-    Supporto per sensore di fine filamento (runout sensor). Design v2 con miglior sensibilità.
+    Supporto per sensore di fine filamento (runout sensor). Design v2 con miglior stabilità.
     File: 124 KB
   </p>
 </div>
 
 ---
 
-### 13. Staffa Catena Globale
+### 13. Staffa Catena
 
 <div class="cad-model-card">
   <div class="cad-model-header">
-    <h4 class="cad-model-title">📦 Staffa Catena Globale</h4>
+    <h4 class="cad-model-title">📦 Staffa Catena</h4>
     <div class="cad-model-actions">
       <button onclick="openCADViewer('../../cad/staffa_catena_globale.stl', 'Staffa Catena Globale')">
         🔍 Visualizza 3D
@@ -332,7 +332,7 @@ Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i 
     </div>
   </div>
   <p class="cad-model-description">
-    Supporto principale per sistema catena portacavi. Collega tutti i rami delle catene alla struttura.
+    Supporto per sistema catena portacavi.
     File: 80 KB
   </p>
 </div>
@@ -343,8 +343,8 @@ Tutti i componenti meccanici della stampante progettati in CAD 3D. Visualizza i 
 
 ## 🛠️ Software Utilizzati
 
-- **AutoCAD** - Modellazione principale e disegno tecnico
-- **FreeCAD** - Modellazione open source e verifiche
+- **AutoCAD** - Modellazione e disegno tecnico
+- **FreeCAD** - Modellazione 3D open source
 - **Viewer 3D Web** - Three.js per visualizzazione interattiva (formato STL)
 
 ---
@@ -395,6 +395,6 @@ Vuoi scaricare tutti i file in un colpo solo?
 <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 8px; margin-top: 40px; text-align: center;">
   <p style="margin: 0; color: var(--text-secondary);">
     💡 <strong>Hai bisogno di modifiche ai modelli?</strong><br>
-    Contattami per consulenze di progettazione CAD custom: <a href="mailto:peppeminniti@gmail.com">peppeminniti@gmail.com</a>
+    Contattami per consulenze di progettazione CAD custom: <a href="mailto:peppe.minniti@gmail.com">peppe.minniti@gmail.com</a>
   </p>
 </div>

@@ -144,7 +144,7 @@ Hai bisogno di modifiche ai modelli?
 - ✅ Ottimizzare per produzione CNC o stampa 3D
 - ✅ Progettare nuove parti custom
 
-**Contatto:** [peppeminniti@gmail.com](mailto:peppeminniti@gmail.com)
+**Contatto:** [peppe.minniti@gmail.com](mailto:peppe.minniti@gmail.com)
 
 ---
 
@@ -173,7 +173,7 @@ I file CAD sono forniti **"as-is"** per scopi educativi e di riferimento.
 - ❌ Redistribuzione commerciale senza permesso
 - ❌ Vendita dei file originali
 
-Per usi commerciali, [contattami](mailto:peppeminniti@gmail.com).
+Per usi commerciali, [contattami](mailto:peppe.minniti@gmail.com).
 
 ---
 
