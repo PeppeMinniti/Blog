@@ -162,7 +162,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
 
   // Esponi funzioni globalmente per uso inline onclick
-  window.openLightbox = function(imgSrc) {
+  window.openLightbox = function(imgElement) {
+    // Accetta sia un elemento img che un URL stringa
+    const imgSrc = typeof imgElement === 'string' ? imgElement : imgElement.src;
     openImageLightbox(imgSrc);
   };
 
