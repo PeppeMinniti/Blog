@@ -130,15 +130,15 @@ function initCADViewer(modelUrl) {
             const sizeY = bbox.max.y - bbox.min.y;
             const sizeZ = bbox.max.z - bbox.min.z;
 
-            // Centra su X e Y
+            // Centra su X e Z (piano orizzontale)
             mesh.position.x = -(bbox.min.x + sizeX / 2);
-            mesh.position.y = -(bbox.min.y + sizeY / 2);
+            mesh.position.z = -(bbox.min.z + sizeZ / 2);
 
-            // Poggia sul piano Z=0 (base a Z=0, centro a Z=height/2)
-            mesh.position.z = -bbox.min.z;
+            // Poggia sul piano Y=0 (base a Y=0, centro a Y=altezza/2)
+            mesh.position.y = -bbox.min.y;
 
-            // Il centro del modello ora è a (0, 0, sizeZ/2)
-            const modelCenter = new THREE.Vector3(0, 0, sizeZ / 2);
+            // Il centro del modello ora è a (0, altezza/2, 0)
+            const modelCenter = new THREE.Vector3(0, sizeY / 2, 0);
 
             console.log('DEBUG - bbox.min:', bbox.min.x, bbox.min.y, bbox.min.z);
             console.log('DEBUG - bbox.max:', bbox.max.x, bbox.max.y, bbox.max.z);
