@@ -1,6 +1,6 @@
 # 📐 File CAD - Stampante 3D Custom
 
-Questa cartella contiene tutti i **file CAD originali** delle parti custom progettate per la stampante.
+Questa cartella contiene molti **file CAD originali** delle parti custom progettate per la stampante.
 
 ---
 
@@ -40,7 +40,7 @@ Questa cartella contiene tutti i **file CAD originali** delle parti custom proge
 
 | File | Descrizione | STL | DWG |
 |------|-------------|-----|-----|
-| staffa_catena_globale | Supporto principale catene | 80 KB | 62 KB |
+| staffa_catena_globale | Supporto catena | 80 KB | 62 KB |
 
 ---
 
@@ -78,16 +78,13 @@ I modelli STL possono essere visualizzati **direttamente nel browser** senza ins
 
 **Software consigliati:**
 
-1. **AutoCAD** (Commerciale - Il migliore)
-   - Download: [autodesk.com/products/autocad](https://www.autodesk.com/products/autocad)
-   - Costo: Trial 30 giorni gratuito, poi a pagamento
-
-2. **FreeCAD** (Open Source - RACCOMANDATO)
+1. **FreeCAD** (Open Source - RACCOMANDATO)
    - Download: [freecad.org/downloads.php](https://www.freecad.org/downloads.php)
    - Costo: Gratis
-   - **Importante:** Richiede ODA File Converter per importare DWG
-     - Download ODA: [opendesign.com/guestfiles/oda_file_converter](https://www.opendesign.com/guestfiles/oda_file_converter)
-     - In FreeCAD: Edit → Preferences → Import/Export → DWG → Imposta percorso converter
+
+2. **AutoCAD** (Commerciale)
+   - Download: [autodesk.com/products/autocad](https://www.autodesk.com/products/autocad)
+   - Costo: Trial 30 giorni gratuito, poi a pagamento
 
 3. **DraftSight** (Freemium)
    - Download: [draftsight.com](https://www.draftsight.com/)
@@ -110,8 +107,6 @@ Le parti sono progettate per essere realizzate in:
 **Note produzione:**
 - Tutti i fori sono calibrati per viti metriche M3, M4, M5
 - Tolleranze: ±0.1mm per fori, ±0.5mm per dimensioni esterne
-- I file includono linee di centraggio per foratura
-
 ---
 
 ## 💡 Formati File
@@ -186,6 +181,6 @@ Per usi commerciali, [contattami](mailto:peppe.minniti@gmail.com).
 ---
 
 <div align="center">
-  <p><strong>Progettato con passione per l'ingegneria di precisione 🎯</strong></p>
+  <p><strong>Progettato con passione per obiettivo sfidante, utile e divertente 🎯</strong></p>
   <p><em>Tutti i modelli testati e validati sulla stampante reale</em></p>
 </div>

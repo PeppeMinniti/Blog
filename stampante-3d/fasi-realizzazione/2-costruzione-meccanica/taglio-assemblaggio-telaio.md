@@ -14,9 +14,9 @@ Materiali:
 - Bulloneria M5/M6
 - Attrezzi: sega, trapano, squadra, metro
 
-## Immagini
+<!-- ## Immagini
 
-<!-- Inserire foto taglio e assemblaggio -->
+Inserire foto taglio e assemblaggio -->
 <!-- ![Taglio profili](../../media/costruzione/taglio-profili.jpg) -->
 <!-- ![Telaio assemblato](../../media/costruzione/telaio-base.jpg) -->
 
@@ -25,9 +25,11 @@ Materiali:
 ### 1. Taglio Profili
 
 ```yaml
-Profili verticali (4×): 1200mm
-Profili orizzontali X (4×): 1000mm
-Profili orizzontali Y (4×): 850mm
+Profili verticali (6×): 1100mm
+Profili orizzontali (8×): 1000mm
+Profili piatto (4×): 880mm
+Profilo piatto (1× rinforzo e sostegno centrale): 860mm
+Profilo asse X (1x): 1250mm  
 Traverse rinforzo (6×): variabili
 ```
 
@@ -44,11 +46,18 @@ tolleranza = ±0.1  # mm
 
 ### 3. Assemblaggio Base
 
-**Ordine assemblaggio:**
+**Ordine assemblaggio:**  
 1. Base rettangolare (4 profili)
 2. Montanti verticali (4 profili)
-3. Telaio superiore (4 profili)
-4. Traverse diagonali (rinforzo)
+3. Angolari per blocco/allineamento montanti con base
+4. Telaio superiore (4 profili)
+5. Angolari per blocco/allineamento montanti con telaio superiore
+6. Telaio piatto (5 profili)
+7. Verifica allineamento struttura
+<!--
+8. Installazione delle guide lineari per gli assi Y e Z
+9. installazione delle viti a ricircolo di sfere per l'asse Z
+-->
 
 ## Attrezzi Necessari
 
@@ -68,14 +77,6 @@ Parallelismo lati opposti: ±1mm
 Planarità base: ±0.5mm
 Altezza montanti: Tutti uguali ±0.5mm
 ```
-
-## Schema Bulloneria
-
-| Giunzione | Vite | Quantità | Note |
-|-----------|------|----------|------|
-| Angoli base | M6×20 | 8 | Con rondella |
-| Montanti | M6×25 | 8 | Serraggio forte |
-| Traverse | M5×20 | 12 | Rinforzo |
 
 ## Suggerimenti
 
@@ -100,9 +101,8 @@ Altezza montanti: Tutti uguali ±0.5mm
 - [ ] Telaio base assemblato
 - [ ] Squadratura verificata
 - [ ] Montanti verticali fissati
-- [ ] Rinforzi diagonali installati
 - [ ] Struttura rigida e stabile
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)

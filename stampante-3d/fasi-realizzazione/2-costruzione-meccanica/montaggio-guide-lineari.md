@@ -14,9 +14,8 @@ Guide utilizzate:
 
 ## Immagini
 
-<!-- Inserire foto montaggio guide -->
-<!-- ![Guide MGN20H](../../media/costruzione/guide-mgn20.jpg) -->
-<!-- ![Allineamento guida](../../media/costruzione/allineamento-guida.jpg) -->
+![Guide MGN20H](../media/guida-mgn20h.jpg)
+![Guide MGN12H](../media/guida-mgn12h.jpg)
 
 ## Specifiche Guide
 
@@ -81,26 +80,26 @@ coppia_serraggio = 4.5  # Nm (viti M5)
 
 ```
 2× MGN20H parallele:
-  - Distanza tra guide: 700mm
-  - Lunghezza utile: 850mm
-  - 4 carrelli totali (2 per guida)
+  - Distanza tra guide: 1020mm
+  - Lunghezza utile: 900mm
+  - 2 carrelli
 ```
 
 ### Asse Z (Verticale)
 
 ```
 2× MGN20H parallele:
-  - Distanza tra guide: 600mm
-  - Lunghezza utile: 900mm
-  - 4 carrelli totali
+  - Distanza tra guide: 920mm
+  - Lunghezza utile: 800mm
+  - 2 carrelli
 ```
 
 ### Asse X (Gantry)
 
 ```
 2× MGN12 parallele:
-  - Distanza tra guide: 80mm
-  - Lunghezza utile: 950mm
+  - Distanza tra guide: 40mm
+  - Lunghezza utile: 900mm
   - 2 carrelli (1 per guida)
 ```
 
@@ -152,7 +151,7 @@ Quantità: 1-2 gocce per carrello
 |----------|-------|-----------|
 | Punti duri | Allineamento scorretto | Verificare parallelismo |
 | Rumore | Mancanza lubrificazione | Lubrificare carrelli |
-| Gioco eccessivo | Precarico insufficiente | Sostituire carrelli Z1/ZA |
+| Gioco eccessivo | Precarico insufficiente | Sostituire carrelli |
 | Usura precoce | Sporcizia | Aggiungere soffietti protezione |
 
 ## Checklist
@@ -167,4 +166,4 @@ Quantità: 1-2 gocce per carrello
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
