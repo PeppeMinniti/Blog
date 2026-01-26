@@ -724,6 +724,47 @@ button:focus {
   border-color: white;
 }
 
+/* Navigation arrows for lightbox */
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  line-height: 1;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  user-select: none;
+  z-index: 10001;
+}
+
+.lightbox-nav.hidden {
+  display: none;
+}
+
+.lightbox-nav:hover {
+  background-color: var(--accent-primary);
+  border-color: white;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
 /* Responsive thumbnails */
 @media (max-width: 768px) {
   .project-thumbnail,

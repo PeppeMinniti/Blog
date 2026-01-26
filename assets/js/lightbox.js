@@ -15,20 +15,36 @@ document.addEventListener('DOMContentLoaded', function() {
   closeBtn.innerHTML = '&times;';
   closeBtn.setAttribute('aria-label', 'Chiudi lightbox');
 
+  // Crea freccia sinistra
+  const prevBtn = document.createElement('span');
+  prevBtn.className = 'lightbox-nav lightbox-prev';
+  prevBtn.innerHTML = '&#8249;';
+  prevBtn.setAttribute('aria-label', 'Immagine precedente');
+
+  // Crea freccia destra
+  const nextBtn = document.createElement('span');
+  nextBtn.className = 'lightbox-nav lightbox-next';
+  nextBtn.innerHTML = '&#8250;';
+  nextBtn.setAttribute('aria-label', 'Immagine successiva');
+
   // Crea un contenitore per il contenuto (immagine o video)
   const contentContainer = document.createElement('div');
   contentContainer.id = 'lightbox-container';
 
   // Aggiungi gli elementi al lightbox
   lightbox.appendChild(closeBtn);
+  lightbox.appendChild(prevBtn);
+  lightbox.appendChild(nextBtn);
   lightbox.appendChild(contentContainer);
   document.body.appendChild(lightbox);
 
-  // Variabile per tracciare il tipo di media corrente
+  // Variabili per tracciare il tipo di media corrente e navigazione
   let currentMediaElement = null;
+  let currentGalleryImages = [];
+  let currentImageIndex = -1;
 
   // Funzione per aprire il lightbox con immagine
-  function openImageLightbox(imageSrc) {
+  function openImageLightbox(imageSrc, galleryImages = [], imageIndex = -1) {
     // Pulisci contenuto precedente
     contentContainer.innerHTML = '';
 
@@ -40,8 +56,54 @@ document.addEventListener('DOMContentLoaded', function() {
     contentContainer.appendChild(img);
     currentMediaElement = img;
 
+    // Imposta galleria e indice per navigazione
+    currentGalleryImages = galleryImages;
+    currentImageIndex = imageIndex;
+
+    // Mostra/nascondi frecce in base alla disponibilità di navigazione
+    updateNavigationButtons();
+
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
+  }
+
+  // Funzione per aggiornare visibilità pulsanti navigazione
+  function updateNavigationButtons() {
+    if (currentGalleryImages.length <= 1) {
+      // Nessuna navigazione se c'è solo 1 immagine o nessuna
+      prevBtn.classList.add('hidden');
+      nextBtn.classList.add('hidden');
+    } else {
+      // Mostra frecce
+      prevBtn.classList.remove('hidden');
+      nextBtn.classList.remove('hidden');
+    }
+  }
+
+  // Funzione per navigare all'immagine precedente
+  function showPreviousImage() {
+    if (currentGalleryImages.length <= 1) return;
+
+    currentImageIndex--;
+    if (currentImageIndex < 0) {
+      currentImageIndex = currentGalleryImages.length - 1; // Loop all'ultima
+    }
+
+    const newSrc = currentGalleryImages[currentImageIndex];
+    openImageLightbox(newSrc, currentGalleryImages, currentImageIndex);
+  }
+
+  // Funzione per navigare all'immagine successiva
+  function showNextImage() {
+    if (currentGalleryImages.length <= 1) return;
+
+    currentImageIndex++;
+    if (currentImageIndex >= currentGalleryImages.length) {
+      currentImageIndex = 0; // Loop alla prima
+    }
+
+    const newSrc = currentGalleryImages[currentImageIndex];
+    openImageLightbox(newSrc, currentGalleryImages, currentImageIndex);
   }
 
   // Funzione per aprire il lightbox con video
@@ -138,6 +200,18 @@ document.addEventListener('DOMContentLoaded', function() {
     closeLightbox();
   });
 
+  // Navigazione immagine precedente
+  prevBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    showPreviousImage();
+  });
+
+  // Navigazione immagine successiva
+  nextBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    showNextImage();
+  });
+
   // Chiudi lightbox cliccando sullo sfondo
   lightbox.addEventListener('click', function(e) {
     if (e.target === lightbox) {
@@ -145,10 +219,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Chiudi lightbox con tasto ESC
+  // Chiudi lightbox con tasto ESC e navigazione con frecce tastiera
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
       closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      showPreviousImage();
+    } else if (e.key === 'ArrowRight') {
+      showNextImage();
     }
   });
 
@@ -165,7 +245,24 @@ document.addEventListener('DOMContentLoaded', function() {
   window.openLightbox = function(imgElement) {
     // Accetta sia un elemento img che un URL stringa
     const imgSrc = typeof imgElement === 'string' ? imgElement : imgElement.src;
-    openImageLightbox(imgSrc);
+
+    // Trova tutte le immagini della stessa galleria
+    let galleryImages = [];
+    let imageIndex = -1;
+
+    if (typeof imgElement !== 'string' && imgElement.parentElement) {
+      // Cerca il parent con classe galleria
+      const gallery = imgElement.closest('.small-thumbnail-gallery, .thumbnail-gallery');
+
+      if (gallery) {
+        // Raccogli tutte le immagini cliccabili della galleria
+        const allImages = gallery.querySelectorAll('img.small-thumbnail, img.project-thumbnail');
+        galleryImages = Array.from(allImages).map(img => img.src);
+        imageIndex = galleryImages.indexOf(imgSrc);
+      }
+    }
+
+    openImageLightbox(imgSrc, galleryImages, imageIndex);
   };
 
   window.closeLightbox = function() {
