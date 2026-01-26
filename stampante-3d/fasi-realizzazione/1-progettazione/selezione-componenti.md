@@ -100,7 +100,7 @@ Guide:              350-410€
 Riscaldamento:      380-480€
 Sensori/Altro:       50-100€
 Alimentatori:       150-200€
-------------------------
+-----------------------------
 TOTALE:          1.550-2.110€
 ```
 
@@ -120,4 +120,4 @@ TOTALE:          1.550-2.110€
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)

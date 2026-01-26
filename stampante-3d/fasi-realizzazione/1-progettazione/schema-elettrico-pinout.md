@@ -9,9 +9,9 @@ title: "Schema Elettrico e Pinout"
 Definizione dello schema elettrico completo e del pinout della scheda BIGTREETECH Octopus Pro V1.1. Questa fase è fondamentale per evitare errori di cablaggio e danni ai componenti.
 
 Documentazione di riferimento:
-- [Pinout Octopus Pro](../../media/BIGTREETECH%20Octopus%20Pro%20V1.1-Pin.jpg)
-- Datasheet TMC2209
-- Datasheet DM556
+- [Pinout Octopus Pro](../media/bigtreetech.jpg)
+- [Datasheet TMC2209](../media/TMC2209.pdf)
+- [Datasheet DM556](../media/DM556.pdf)
 
 ## Immagini
 
