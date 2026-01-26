@@ -17,8 +17,27 @@ Categorie principali:
 
 ## Immagini
 
-<!-- Inserire immagini componenti qui -->
-<!-- ![Componenti elettronici](../../media/componenti-elettronica.jpg) -->
+<div class="small-thumbnail-gallery">
+  <img src="../media/bigtreetech.jpg" alt="BIGTREETECH Octopus Pro" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/tmc2209.jpg" alt="Driver TMC2209" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/dm556.jpg" alt="Driver DM556" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/raspberry.jpg" alt="Raspberry Pi" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/nema23.jpg" alt="Motore NEMA 23" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/nema17.jpg" alt="Motore NEMA 17" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/guida-mgn20h.jpg" alt="Guida MGN20H" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/guida-mgn12h.jpg" alt="Guida MGN12H" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/cinghia-gt2-6.jpg" alt="Cinghia GT2 6mm" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/cinghia-gt2-10.jpg" alt="Cinghia GT2 10mm" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/sfu1605.jpg" alt="Vite a ricircolo SFU1605" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/hotend.jpg" alt="Hotend All-Metal" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/riscaldatore-piatto.jpg" alt="Riscaldatore Piatto" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/vetro-temperato.jpg" alt="Vetro Temperato" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/sensore-livellamento.jpg" alt="Sensore CR Touch" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/sensore-filamento.jpg" alt="Sensore Filamento" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/sensore-accelerometro.jpg" alt="Accelerometro S2DW" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/endstop.jpg" alt="Endstop Meccanico" class="small-thumbnail" onclick="openLightbox(this)">
+  <img src="../media/pulsante-arresto.jpg" alt="Pulsante Arresto Emergenza" class="small-thumbnail" onclick="openLightbox(this)">
+</div>
 
 ## Lista Componenti Principali
 
