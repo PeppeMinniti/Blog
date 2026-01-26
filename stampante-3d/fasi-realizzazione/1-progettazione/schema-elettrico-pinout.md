@@ -16,7 +16,12 @@ Definizione dello schema elettrico completo e del pinout della scheda BIGTREETEC
 
 ## Collegamento Motori Stepper
 
-I motori dell'estrusore e dell'asse X sono collegati direttamente sulla scheda Octopus in corrispondenza del motore7 l'estrusore e in corrispondenza del motore0 l'asse X. Per gli assi Y e Z dovranno essere prelevati i segnali STEP, DIR e ENABLE dal connettore del driver del motore1 per l'asse Y e dal connettore del driver del motore2 per l'asse Z.
+I motori dell'estrusore e dell'asse X sono collegati direttamente alla scheda Octopus Pro, rispettivamente ai connettori **MOTOR7** (estrusore) e **MOTOR0** (asse X).
+
+Per gli assi Y e Z, che utilizzano driver esterni DM556, vengono prelevati solo i segnali di controllo (STEP, DIR, ENABLE) dai connettori della scheda:
+
+- **Asse Y**: segnali dal connettore MOTOR1
+- **Asse Z**: segnali dal connettore MOTOR2
 
 ### Octopus Pro - Driver Interni (TMC2209)
 
