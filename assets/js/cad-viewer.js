@@ -129,15 +129,22 @@ function initCADViewer(modelUrl) {
             geometry.boundingBox.getCenter(center);
             mesh.position.sub(center);
 
-            // Scala camera in base a dimensioni
+            // Scala camera in base a dimensioni dell'oggetto
             const box = new THREE.Box3().setFromObject(mesh);
             const size = box.getSize(new THREE.Vector3());
             const maxDim = Math.max(size.x, size.y, size.z);
             const fov = camera.fov * (Math.PI / 180);
             let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-            cameraZ *= 2; // Zoom out un po'
-            camera.position.set(cameraZ, cameraZ, cameraZ);
+            cameraZ *= 3.5; // Zoom out per vedere oggetto intero con margine
+
+            // Posiziona camera con angolazione isometrica
+            camera.position.set(cameraZ, cameraZ * 0.8, cameraZ);
             camera.lookAt(0, 0, 0);
+
+            // Aggiorna limiti OrbitControls in base a dimensioni oggetto
+            controls.minDistance = maxDim * 0.5;
+            controls.maxDistance = maxDim * 10;
+            controls.update();
 
             scene.add(mesh);
             currentViewer.model = mesh;
