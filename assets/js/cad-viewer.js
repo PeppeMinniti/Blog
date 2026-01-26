@@ -123,20 +123,25 @@ function initCADViewer(modelUrl) {
 
             // Centra modello su X e Y, poggia sul piano Z=0
             geometry.computeBoundingBox();
-            const center = new THREE.Vector3();
-            geometry.boundingBox.getCenter(center);
+            const bbox = geometry.boundingBox;
 
-            // Centra solo X e Y
-            mesh.position.x -= center.x;
-            mesh.position.y -= center.y;
+            // Calcola dimensioni
+            const sizeX = bbox.max.x - bbox.min.x;
+            const sizeY = bbox.max.y - bbox.min.y;
+            const sizeZ = bbox.max.z - bbox.min.z;
 
-            // Poggia sul piano Z=0 (sposta il punto più basso del modello a Z=0)
-            mesh.position.z -= geometry.boundingBox.min.z;
+            // Centra su X e Y
+            mesh.position.x = -(bbox.min.x + sizeX / 2);
+            mesh.position.y = -(bbox.min.y + sizeY / 2);
+
+            // Poggia sul piano Z=0 (base a Z=0, centro a Z=height/2)
+            mesh.position.z = -bbox.min.z;
+
+            // Il centro del modello ora è a (0, 0, sizeZ/2)
+            const modelCenter = new THREE.Vector3(0, 0, sizeZ / 2);
 
             // Scala camera in base a dimensioni dell'oggetto
-            const box = new THREE.Box3().setFromObject(mesh);
-            const size = box.getSize(new THREE.Vector3());
-            const maxDim = Math.max(size.x, size.y, size.z);
+            const maxDim = Math.max(sizeX, sizeY, sizeZ);
 
             // Crea griglia proporzionata all'oggetto (3x dimensione oggetto)
             const gridSize = maxDim * 3;
@@ -145,20 +150,27 @@ function initCADViewer(modelUrl) {
             scene.add(gridHelper);
 
             const fov = camera.fov * (Math.PI / 180);
-            let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-            cameraZ *= 2.8; // Distanza iniziale per vedere oggetto completo con margine
+            let cameraDist = Math.abs(maxDim / 2 / Math.tan(fov / 2));
+            cameraDist *= 2.8; // Distanza iniziale per vedere oggetto completo con margine
 
-            // Posiziona camera con angolazione isometrica
-            camera.position.set(cameraZ, cameraZ * 0.7, cameraZ);
-            camera.lookAt(0, 0, 0);
+            // Posiziona camera con angolazione isometrica, guardando il centro del modello
+            camera.position.set(
+                modelCenter.x + cameraDist,
+                modelCenter.y + cameraDist * 0.7,
+                modelCenter.z + cameraDist
+            );
+            camera.lookAt(modelCenter);
 
-            // Aggiorna limiti OrbitControls - ampio range di zoom
+            // Aggiorna target OrbitControls per ruotare intorno al centro del modello
+            controls.target.copy(modelCenter);
             controls.minDistance = maxDim * 0.2; // Permetti di avvicinarsi
             controls.maxDistance = maxDim * 50;  // Permetti di allontanarsi molto
             controls.update();
 
             scene.add(mesh);
             currentViewer.model = mesh;
+            currentViewer.modelCenter = modelCenter;
+            currentViewer.cameraDist = cameraDist;
 
             // Rimuovi loading
             loadingDiv.remove();
@@ -201,10 +213,22 @@ function onCADViewerResize() {
 }
 
 function resetCADCamera() {
-    if (!currentViewer) return;
-    currentViewer.camera.position.set(5, 5, 5);
-    currentViewer.camera.lookAt(0, 0, 0);
-    currentViewer.controls.reset();
+    if (!currentViewer || !currentViewer.modelCenter || !currentViewer.cameraDist) return;
+
+    const mc = currentViewer.modelCenter;
+    const dist = currentViewer.cameraDist;
+
+    // Ripristina posizione camera isometrica
+    currentViewer.camera.position.set(
+        mc.x + dist,
+        mc.y + dist * 0.7,
+        mc.z + dist
+    );
+    currentViewer.camera.lookAt(mc);
+
+    // Ripristina target controlli
+    currentViewer.controls.target.copy(mc);
+    currentViewer.controls.update();
 }
 
 function toggleCADWireframe() {
