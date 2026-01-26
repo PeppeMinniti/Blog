@@ -204,10 +204,10 @@ Sono sempre interessato a nuovi progetti e collaborazioni. Contattami se:
 - Vuoi ottimizzare o upgrader una macchina CNC/3D printer
 - Necessiti di sviluppo software embedded o gestionali
 
-📧 [**Email:** peppe.minniti@gmail.com](peppe.minniti@gmail.com)  
-💼 [**LinkedIn:** www.linkedin.com/in/giuseppe-minniti-m2m-fablab](www.linkedin.com/in/giuseppe-minniti-m2m-fablab>)  
-🐙 [**GitHub:** https://github.com/PeppeMinniti/Blog](https://github.com/PeppeMinniti/Blog)  
-📷 [**Instagram:** https://www.instagram.com/peppe_minniti/](https://www.instagram.com/peppe_minniti/)  
+📧 **Email:** [peppe.minniti@gmail.com]  
+💼 **LinkedIn:** [www.linkedin.com/in/giuseppe-minniti-m2m-fablab]  
+🐙 **GitHub:** [https://github.com/PeppeMinniti/Blog]  
+📷 **Instagram:** [https://www.instagram.com/peppe_minniti/]  
 
 ---
 

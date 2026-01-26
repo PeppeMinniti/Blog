@@ -121,11 +121,17 @@ function initCADViewer(modelUrl) {
             mesh.castShadow = true;
             mesh.receiveShadow = true;
 
-            // Centra modello
+            // Centra modello su X e Y, poggia sul piano Z=0
             geometry.computeBoundingBox();
             const center = new THREE.Vector3();
             geometry.boundingBox.getCenter(center);
-            mesh.position.sub(center);
+
+            // Centra solo X e Y
+            mesh.position.x -= center.x;
+            mesh.position.y -= center.y;
+
+            // Poggia sul piano Z=0 (sposta il punto più basso del modello a Z=0)
+            mesh.position.z -= geometry.boundingBox.min.z;
 
             // Scala camera in base a dimensioni dell'oggetto
             const box = new THREE.Box3().setFromObject(mesh);
