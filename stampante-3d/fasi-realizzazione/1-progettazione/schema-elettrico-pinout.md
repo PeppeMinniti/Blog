@@ -1,26 +1,22 @@
 ---
 layout: default
-title: "Schema Elettrico e Pinout"
+title: "Schemi Elettrici e Pinout"
 ---
-# Schema Elettrico e Pinout
-
-## Descrizione
-
-Definizione dello schema elettrico completo e del pinout della scheda BIGTREETECH Octopus Pro V1.1. Questa fase è fondamentale per evitare errori di cablaggio e danni ai componenti.
+# Schemi Elettrici e Pinout
 
 Documentazione di riferimento:
+
 - [Pinout Octopus Pro](../media/bigtreetech.jpg)
 - [Datasheet TMC2209](../media/TMC2209.pdf)
 - [Datasheet DM556](../media/DM556.pdf)
 
-## Immagini
+## Descrizione
 
-![Pinout Octopus Pro V1.1](../../media/BIGTREETECH%20Octopus%20Pro%20V1.1-Pin.jpg)
+Definizione dello schema elettrico completo e del pinout della scheda BIGTREETECH Octopus Pro V1.1  e dei driver per i motori stepper. Questa fase è fondamentale per evitare errori di cablaggio e danni ai componenti.
 
-<!-- Aggiungere schema elettrico custom -->
-<!-- ![Schema elettrico](../../media/schema-elettrico.jpg) -->
+## Collegamento Motori Stepper
 
-## Pinout Motori Stepper
+I motori dell'estrusore e dell'asse X sono collegati direttamente sulla scheda Octopus in corrispondenza del motore7 l'estrusore e in corrispondenza del motore0 l'asse X. Per gli assi Y e Z dovranno essere prelevati i segnali STEP, DIR e ENABLE dal connettore del driver del motore1 per l'asse Y e dal connettore del driver del motore2 per l'asse Z.
 
 ### Octopus Pro - Driver Interni (TMC2209)
 
@@ -78,7 +74,7 @@ Endstops:
 
 ## Schema Alimentazione
 
-```
+```yaml
 Alimentatore 24V 10A:
   → Octopus Pro (elettronica + hotend)
   → NEMA 17 (X + estrusore)
@@ -91,6 +87,7 @@ Alimentatore 24V 62.5A:
   → SSR (Solid State Relay)
 ```
 
+
 ## Cablaggio Critico
 
 ### Hotend
@@ -102,10 +99,10 @@ Part Cooling: FAN1 (PWM controllato)
 
 ### Piatto Riscaldato
 ```yaml
-Controllo: SSR via MOSFET BED-OUT
-Sensore: Termistor TB
-Potenza: 9× 200W = 1800W max
-Corrente: 75A @ 24V
+Controllo: Tramite scheda dedicata con microcontrollore ESP32-S3 N16R8 e 9 Mosfet di potenza
+Sensore: 9 sensori (1 per piatto con PID su singolo canale)
+Potenza: 9 × 200W = 1800W max (effettivamente ridotta al 70% tramite controllo di gestione temperature)
+Corrente: Con gestione della limitazione = 52.5A max @ 24V
 ```
 
 ## Sicurezze Implementate
@@ -117,12 +114,6 @@ max_error: 120
 check_gain_time: 20
 hysteresis: 5
 heating_gain: 2
-
-[verify_heater heater_bed]
-max_error: 120
-check_gain_time: 90
-hysteresis: 5
-heating_gain: 1
 ```
 
 ## Codice Colori Cavi (Convenzione)
