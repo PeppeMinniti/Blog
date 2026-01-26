@@ -174,12 +174,12 @@ Supporto nella progettazione e realizzazione di:
 
 ## 📈 Perché Scegliermi?
 
-✅ **Esperienza pratica:** Oltre 50 progetti completati con successo
-✅ **Competenze trasversali:** Hardware + Software + Meccanica
-✅ **Problem solving:** Capacità di risolvere problemi complessi
-✅ **Approccio pragmatico:** Soluzioni che funzionano davvero, non solo sulla carta
-✅ **Documentazione:** Ogni progetto è documentato e riproducibile
-✅ **Costi competitivi:** Soluzioni custom a frazione del costo commerciale
+✅ **Esperienza pratica:** Oltre 50 progetti completati con successo  
+✅ **Competenze trasversali:** Hardware + Software + Meccanica  
+✅ **Problem solving:** Capacità di risolvere problemi complessi  
+✅ **Approccio pragmatico:** Soluzioni che funzionano davvero, non solo sulla carta  
+✅ **Documentazione:** Ogni progetto è documentato e riproducibile  
+✅ **Costi competitivi:** Soluzioni custom a frazione del costo commerciale  
 
 ---
 
@@ -192,7 +192,7 @@ Alcuni argomenti in programma:
 - Ottimizzazione Klipper: da zero a stampante perfetta
 - Progettare una CNC: meccanica, elettronica e software
 - Controllo PID spiegato con esempi pratici
-- ESP32 + WebSocket: interfacce real-time
+- ESP32 + WebSocket: interfacce real-time (o quasi ⏰😇)
 
 ---
 
@@ -204,10 +204,10 @@ Sono sempre interessato a nuovi progetti e collaborazioni. Contattami se:
 - Vuoi ottimizzare o upgrader una macchina CNC/3D printer
 - Necessiti di sviluppo software embedded o gestionali
 
-📧 **Email:** [peppe.minniti@gmail.com]
-💼 **LinkedIn:** [www.linkedin.com/in/giuseppe-minniti-m2m-fablab]
-🐙 **GitHub:** [https://github.com/PeppeMinniti/Blog]
-📷 **Instagram:** [https://www.instagram.com/peppe_minniti/]
+📧 **Email:** [peppe.minniti@gmail.com]  
+💼 **LinkedIn:** [www.linkedin.com/in/giuseppe-minniti-m2m-fablab]  
+🐙 **GitHub:** [https://github.com/PeppeMinniti/Blog]  
+📷 **Instagram:** [https://www.instagram.com/peppe_minniti/]  
 
 ---
 
@@ -219,22 +219,20 @@ I progetti sono condivisi a scopo educativo e di ispirazione. Ogni progetto può
 
 ## ⚡ Aggiornamenti Recenti
 
-- **Gen 2026** - Aggiunto progetto Stampante 3D con documentazione completa
+- **Gen 2026** - Aggiunto progetto Stampante 3D con documentazione in fase di completamento
 - **Gen 2026** - Riorganizzazione portfolio con struttura navigabile
 - **Dic 2025** - Completata CNC 5 assi con test funzionali
 
 ---
 
-<div align="center">
+### 🚀 Trasformare le idee in realtà
 
-### 🚀 Trasformiamo le idee in realtà
+- *Se riesci a immaginarlo, possiamo costruirlo*  
 
-*Se riesci a immaginarlo, possiamo costruirlo*
-
-[📧 Contattami](mailto:tuaemail@example.com) | [📂 Vedi tutti i progetti](#-altri-progetti) | [👤 Chi sono](about.md)
-
-</div>
+[📧 Contattami](mailto:peppe.minniti@gmail.com)  
+[📂 Vedi tutti i progetti](#-altri-progetti)  
+[👤 Chi sono](about.md)
 
 ---
 
-*Made with ⚡ by Peppe Minniti - Maker, Developer & Automation Engineer*
+Peppe Minniti - Maker, Developer & Automation Engineer*
