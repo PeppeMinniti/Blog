@@ -15,7 +15,9 @@ Schema alimentazione:
 
 ## Immagini
 
-![Sistema raffreddamento alimentatori](../../media/sistema%20raffreddamento%20alimentatore%20piatti.jpeg)
+<div class="thumbnail-gallery">
+  <img src="../../media/sistema raffreddamento alimentatore piatti.jpeg" class="project-thumbnail">
+</div>
 
 <!-- Aggiungere schema elettrico -->
 <!-- ![Schema alimentazione](../../media/elettronica/schema-alimentazione.jpg) -->

@@ -44,22 +44,20 @@ Ethernet: Optional (con modulo aggiuntivo)
 ```yaml
 Dimensioni minime: 400×300×150mm
 Materiale: Lamiera o plastica
-Ventilazione: Obbligatoria (2× fan 120mm)
-DIN rail: Per PSU e componenti accessori
-Passacavi: Guarnizioni PG13.5
+Ventilazione: Obbligatoria (fan 120mm)
+Passacavi: Guarnizioni (TPU da realizzare)
 ```
 
 ### Montaggio Scheda
 
 ```bash
 # Posizionamento
-- Distanza dal fondo: 50mm (clearance ventilazione)
-- Fissaggio: 4× distanziatori M3 (10-15mm)
+- Distanza dal fondo: 20mm (clearance ventilazione)
+- Fissaggio: 4× distanziatori M3 (20-25mm)
 - Orientamento: USB verso basso (accessibilità)
 
 # Ventilazione
-- Fan intake: Lato componenti
-- Fan exhaust: Lato opposto
+- Fan:  Lato componenti
 - Temperatura max box: 45°C
 ```
 
@@ -71,24 +69,23 @@ Passacavi: Guarnizioni PG13.5
 Slot utilizzati: MOTOR_0 (X), MOTOR_7 (E)
 Modalità: UART (step/dir + comunicazione seriale)
 Jumpers richiesti:
-  - Rimuovere tutti i jumper microstep
-  - Installare jumper UART
-Vref: Configurato via software (non tramite potenziometro)
+  - Eventualmente fosse presente, rimuovere il jumper UART
+  - Posizionare i jumper microstep MS0 e MS1 in base al modello del driver
+Vref: Configurato via potenziometro
 ```
 
 ### Configurazione Jumper TMC2209
 
 ```
-Jumper MS0: RIMOSSO
-Jumper MS1: RIMOSSO
-Jumper MS2: RIMOSSO
-Jumper UART: INSTALLATO (connette pin UART al MCU)
+Jumper MS0: Da stabilire in base al modello del driver
+Jumper MS1: Da stabilire in base al modello del driver
+Jumper UART: RIMOSSO
 ```
 
 ### Driver DM556 Esterni (Assi Y e Z)
 
 ```yaml
-Connessione: Via interfaccia STEP/DIR
+Connessione: Via interfaccia STEP/DIR/ENABLE
 Slot: MOTOR_1 (Y), MOTOR_2 (Z)
 Alimentazione driver: 36V separata (NON dalla scheda)
 Microstep: Impostato su DIP switch driver (64 per Y, 32 per Z)
@@ -113,7 +110,7 @@ Protezione:
 
 ```
 PSU 24V 10A ──[Fusibile 10A]──┬── Octopus Pro V+ (morsettiera)
-                               └── GND (morsettiera)
+                              └── GND (morsettiera)
 
 ATTENZIONE: Driver DM556 hanno alimentazione separata (36V)
 ```
@@ -146,8 +143,8 @@ HE0 (Hotend):
   - Protezione: Thermal runaway via firmware
 
 BED (Piatto):
-  - Controllo: SSR esterno (corrente troppo alta)
-  - Output: Segnale per SSR (12-24V)
+  - Controllo: Esterno (corrente troppo alta e 9 riscaldatori con 9 sensori di temperatura)
+  - Output: Gestito da controller esterno
   - Max corrente diretta: 10A (non sufficiente per piatto grande)
 ```
 
@@ -161,9 +158,9 @@ TH0 (Hotend):
   - Pullup: 4.7kΩ (integrato)
 
 TB (Bed):
-  - Pin: PF3
-  - Tipo: Generico NTC 100K
-  - Connessione: 2-pin JST-XH
+  - Pin: PF3 (non utilizzato)
+  - Tipo: Generico NTC 100K (non utilizzato)
+  - Connessione: 2-pin JST-XH (al momento connesso ma non utilizzato)
 ```
 
 ## Connessione Raspberry Pi
@@ -210,7 +207,7 @@ Uscita 3.3V MCU: 3.3V ±0.1V
 ```yaml
 Protezioni implementate:
   - Fusibile alimentazione principale
-  - Thermal runaway firmware (hotend + bed)
+  - Thermal runaway firmware (hotend)
   - Overcurrent protection driver TMC
   - Watchdog MCU
   - Emergency stop (opzionale): NC switch
@@ -254,4 +251,4 @@ aliases:
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)

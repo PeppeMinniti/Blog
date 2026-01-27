@@ -11,7 +11,7 @@ Collegamento di tutti i motori stepper, endstop, sensori temperatura e sonde all
 Componenti da cablare:
 - 8× Motori stepper (2 NEMA17 + 6 NEMA23)
 - Endstop (X, Y, BLTouch)
-- Termistors (hotend, bed)
+- Termistors (hotend)
 - BLTouch (auto leveling)
 - Fan (hotend, part cooling)
 
@@ -56,15 +56,15 @@ Nota: Stesso schema asse X
 
 ```yaml
 Motori: 6× NEMA 23 (3.0Nm, 4.2A)
-  - 4× per asse Y (paralleli)
-  - 2× per asse Z (paralleli)
+  - 2× per asse Y (paralleli)
+  - 4× per asse Z (paralleli)
 
 Connessione driver DM556:
-  PUL+ (Step+): Da Octopus MOTOR_X STEP
+  PUL+ (Step+): Da Octopus MOTOR(1 o 2) STEP
   PUL- (Step-): GND
-  DIR+ (Dir+): Da Octopus MOTOR_X DIR
+  DIR+ (Dir+): Da Octopus MOTOR(1 o 2) DIR
   DIR- (Dir-): GND
-  ENA+ (Enable+): Da Octopus MOTOR_X ENABLE
+  ENA+ (Enable+): Da Octopus MOTOR(1 o 2) ENABLE
   ENA- (Enable-): GND
 
 Alimentazione motori:
@@ -152,6 +152,9 @@ pullup_resistor: 4700
 
 ### Bed Thermistor
 
+ - **Attualmente non gestito da klipper ma da controller esterno**  
+
+<!-->
 ```yaml
 Tipo: NTC 100K generico
 Connessione: TB su Octopus
@@ -163,13 +166,14 @@ Klipper config:
 sensor_type: Generic 3950
 sensor_pin: PF3
 ```
+<-->
 
 ## Cablaggio Ventole
 
 ### Hotend Fan (Always ON)
 
 ```yaml
-Ventola: 24V 4020 (40×40×20mm)
+Ventola: 24V 4010 (40×40×10mm)
 Connessione: FAN0 su Octopus
   - Red (+): 24V always-on
   - Black (-): GND
@@ -302,7 +306,7 @@ TEMPERATURE
 - [ ] Tutti i motori cablati correttamente
 - [ ] Endstop X e Y connessi e testati
 - [ ] BLTouch connesso e risponde
-- [ ] Termistors leggono temperatura ambiente
+- [ ] Termistor legge temperatura ambiente
 - [ ] Ventole connesse e girano nella direzione corretta
 - [ ] Cavi protetti con guaine
 - [ ] Cable chain installate su assi mobili
@@ -312,4 +316,4 @@ TEMPERATURE
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
