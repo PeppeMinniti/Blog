@@ -156,7 +156,7 @@ Le stampanti 3D commerciali di grandi dimensioni hanno costi proibitivi (5.000-1
 ## Costi Stimati
 
 | Categoria | Costo Approssimativo |
-|-----------|---------------------|
+|:----------|---------------------:|
 | Profili acciaio 40x20x2mm | 100-150€ |
 | Guide MGN20H 4 guide 1000mm + 4 carrelli modello lungo | 280-320€ |
 | Guide MGN12 2 guide 1000mm + 2 carrelli modello lungo | 70-90€ |
