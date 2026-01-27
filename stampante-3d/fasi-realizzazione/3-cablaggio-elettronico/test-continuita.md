@@ -147,13 +147,9 @@ _I colori possono essere diversi in base ai modelli (potresti trovarti anche il 
 
 ```yaml
 Test pre-installazione:
-  - Verificare jumper UART corretto
-  - Rimuovere jumper microstep
+  - Verificare jumper UART rimosso
+  - Settare jumper microstep
   - Orientamento: Heatsink verso alto
-
-Test post-installazione (PSU ON, Klipper running):
-  - LED driver: lampeggiante verde/rosso
-  - Temperatura: < 50°C (a riposo)
 ```
 
 ### DM556 (esterni)
@@ -162,11 +158,11 @@ Test post-installazione (PSU ON, Klipper running):
 Configurazione DIP switch:
   - Microstep Y: 64 → SW 5,6,7 = ON-ON-OFF
   - Microstep Z: 32 → SW 5,6,7 = ON-OFF-OFF
-  - Corrente: Impostare secondo NEMA23 (4.2A)
+  - Corrente: Impostare secondo NEMA23 (da 2A a 4.2A) 
 
 Test LED:
   - LED verde: Power OK
-  - LED rosso: Errore (sovracorrente, sovratempera)
+  - LED rosso: Errore (sovracorrente, sovratemperatura)
 ```
 
 ## Test Prima Accensione
@@ -190,7 +186,8 @@ Test LED:
    - Se -273°C: corto
    - Se 999°C: disconnesso
 
-# Step 3: Test motori (uno alla volta)
+# Step 3: Test motori (uno alla volta) 
+# ATTENZIONE ######## COLLEGARE SEMPRE A SISTEMA SPENTO ########
 1. Collegare motore X
 2. Disabilitare tutti gli altri stepper nel config
 3. Testare movimento: G1 X10 F1000
@@ -235,7 +232,6 @@ Test hotend heater:
 
 ```markdown
 # Log Test Continuità Stampante 3D
-Data: ___/___/______
 
 ## Pre-accensione
 - [ ] Isolamento PSU > 1MΩ
@@ -245,12 +241,15 @@ Data: ___/___/______
 ## Motori
 - [ ] NEMA17 X: Bobine ___Ω / ___Ω
 - [ ] NEMA17 E: Bobine ___Ω / ___Ω
-- [ ] NEMA23 Y: Bobine ___Ω / ___Ω
-- [ ] NEMA23 Z: Bobine ___Ω / ___Ω
+- [ ] NEMA23 Y: Bobine ___Ω / ___Ω M1
+- [ ] NEMA23 Y: Bobine ___Ω / ___Ω M2
+- [ ] NEMA23 Z: Bobine ___Ω / ___Ω M1
+- [ ] NEMA23 Z: Bobine ___Ω / ___Ω M2
+- [ ] NEMA23 Z: Bobine ___Ω / ___Ω M3
+- [ ] NEMA23 Z: Bobine ___Ω / ___Ω M4
 
 ## Sensori
 - [ ] Hotend thermistor: ___kΩ @ 25°C
-- [ ] Bed thermistor: ___kΩ @ 25°C
 - [ ] Endstop X: NO test OK
 - [ ] Endstop Y: NO test OK
 - [ ] BLTouch: Self-test OK
@@ -280,4 +279,4 @@ Firma: ________________
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
