@@ -12,15 +12,17 @@ Test fondamentali da eseguire PRIMA della prima accensione per evitare danni ai 
 
 ## Immagini
 
-<!-- Inserire foto test multimetro -->
-<!-- ![Test continuità](../../media/elettronica/test-continuita.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/elettronica/multimetro.jpg" class="project-thumbnail">
+  <img src="../media/elettronica/tester-continuità.jpg" class="project-thumbnail">
+  <img src="../media/elettronica/termocamera.jpg" class="project-thumbnail">
+</div>
 
 ## Strumenti Necessari
 
 ```yaml
 Essenziali:
   - Multimetro digitale (modalità: Ω, V, continuità)
-  - Puntali di ricambio
   - Pinze a becco lungo
 
 Opzionali:
@@ -91,41 +93,6 @@ Endstop:
   - NC (normally closed): 0Ω quando non premuto
 ```
 
-## Test Motori Stepper
-
-### Verifica Bobine
-
-```python
-# Test resistenza bobine (multimetro)
-# NEMA 17 tipico
-
-bobina_A = 2.5  # Ω (misurato tra pin 1-2)
-bobina_B = 2.4  # Ω (misurato tra pin 3-4)
-
-if abs(bobina_A - bobina_B) < 0.5:
-    print("✓ Bobine bilanciate")
-else:
-    print("✗ Possibile bobina danneggiata")
-
-# Verifica isolamento
-isolamento = float('inf')  # Ω (tra bobina A e B)
-if isolamento > 1e6:  # >1MΩ
-    print("✓ Bobine isolate correttamente")
-```
-
-### Test Continuità Cavi Motore
-
-```yaml
-Procedura:
-  1. Scollegare motore da driver
-  2. Misurare continuità lato driver → lato motore
-  3. Per ogni filo: resistenza < 1Ω
-
-Lunghezza cavo 2m:
-  - Resistenza attesa: 0.1-0.5Ω (dipende sezione)
-  - Se > 2Ω: cavo danneggiato o sezione troppo piccola
-```
-
 ## Test Sensori
 
 ### Thermistors
@@ -137,10 +104,6 @@ Hotend thermistor:
   - Resistenza misurata: 95-105kΩ
   - Tolleranza: ±5%
   - Se fuori range: termistor difettoso
-
-Bed thermistor:
-  - Resistenza misurata: 95-105kΩ
-  - Tipo: Generic NTC 100K
 
 Test riscaldamento:
   - Scaldare termistor con dita
@@ -177,6 +140,9 @@ Movimento pin:
   - All'accensione: extend/retract 2 volte (self-test)
   - LED rosso lampeggiante: OK
   - LED rosso fisso: ERRORE
+
+_I colori possono essere diversi in base ai modelli (potresti trovarti anche il blu e il viola)_
+
 ```
 
 ## Test Driver Stepper
