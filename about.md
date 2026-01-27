@@ -2,7 +2,7 @@
 
 <div class="about-intro">
   <div class="about-intro-photo">
-    <img src="assets/images/peppe.png" alt="Peppe Minniti" class="profile-photo-small">
+    <img src="assets/images/peppe-color.png" alt="Peppe Minniti" class="profile-photo-small">
   </div>
   <div class="about-intro-text">
     <h2>In Breve</h2>
