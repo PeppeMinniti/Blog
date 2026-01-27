@@ -16,9 +16,11 @@ Componenti:
 
 ## Immagini
 
-<!-- Inserire foto estrusore e hotend -->
-<!-- ![Estrusore BMG](../../media/costruzione/estrusore-bmg.jpg) -->
-<!-- ![Hotend montato](../../media/costruzione/hotend-montato.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/hotend.jpg" alt="hotend" class="project-thumbnail">
+  <img src="../media/estrusore-1.jpg" alt="estrusore1" class="project-thumbnail">
+  <img src="../media/estrusore-2.jpg" alt="estrusore2" class="project-thumbnail">
+</div>
 
 ## Estrusore BMG (Bowden o Direct)
 
@@ -26,7 +28,6 @@ Componenti:
 
 ```yaml
 Tipo: Dual gear (doppio ingranaggio)
-Rapporto: 3:1 (riduzione)
 Filamento: 1.75mm
 Grip: Ingranaggi dentati
 Vantaggio: Precisione, no slipping
@@ -63,7 +64,7 @@ Heatbreak: Tubo acciaio con PTFE interno
 Heater block: Blocco alluminio
 Resistenza: 24V 40W (cartridge heater)
 Termistor: ATC Semitec 104GT-2 (100K)
-Ugello: Ottone 0.4mm M6 thread
+Ugello: Acciaio temperato 0.4mm M6 thread
 Heat sink: Alette raffreddamento + ventola
 ```
 
@@ -127,7 +128,7 @@ step_pin: PD15
 dir_pin: PD14
 enable_pin: !PC7
 microsteps: 8
-rotation_distance: 7.82  # BMG dual gear (calibrare!)
+rotation_distance: 7.82  # BMG dual gear (ATTENZIONE ***** da calibrare! ***** )
 nozzle_diameter: 0.400
 filament_diameter: 1.750
 
@@ -211,4 +212,4 @@ M104 S0          ; Spegni hotend
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)

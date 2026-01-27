@@ -132,7 +132,7 @@ Asse X/Y (cinghie):
 Asse Z (viti):
   - Dadi a ricircolo con precarico
   - Giunto elimina tensioni assiali
-  - Motori con holding torque
+  - Motori con holding torque elevato (consigliato)
 ```
 
 ## Configurazione Klipper
@@ -173,7 +173,7 @@ position_max: 800
 ### Viti Z (ogni 200 ore)
 
 ```bash
-- Lubrificare con grasso NLGI 2
+- Lubrificare con grasso 
 - Verificare gioco assiale
 - Controllare cuscinetti
 ```
@@ -188,6 +188,10 @@ position_max: 800
 - [ ] Movimento manuale fluido senza giochi
 - [ ] Nessun rumore anomalo durante movimento
 
+## Link utili
+
+[Motori passo passo - Funzionamento, Dimensionamento, Pilotaggio, Utilizzo, Acquisto](https://www.motoripassopasso.it/Precauzioni)
+
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
