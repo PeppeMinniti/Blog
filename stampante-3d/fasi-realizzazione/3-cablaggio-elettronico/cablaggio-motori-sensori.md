@@ -154,7 +154,7 @@ pullup_resistor: 4700
 
  - **Attualmente non gestito da klipper ma da controller esterno**  
 
-<!-->
+<!--
 ```yaml
 Tipo: NTC 100K generico
 Connessione: TB su Octopus
@@ -166,7 +166,7 @@ Klipper config:
 sensor_type: Generic 3950
 sensor_pin: PF3
 ```
-<-->
+-->
 
 ## Cablaggio Ventole
 
