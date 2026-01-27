@@ -67,9 +67,6 @@ V+ main input → GND:
 Heater output (HE0) → GND:
   Resistenza: 10-30Ω (resistenza heater cartridge)
   (Se 0Ω: corto! Se infinito: heater disconnesso)
-
-Bed output → GND:
-  Resistenza: infinito (SSR = circuito aperto quando off)
 ```
 
 ### 3. Verifica Polarità Connessioni
@@ -141,7 +138,7 @@ Movimento pin:
   - LED rosso lampeggiante: OK
   - LED rosso fisso: ERRORE
 
-_I colori possono essere diversi in base ai modelli (potresti trovarti anche il blu e il viola)_
+*I colori possono essere diversi in base ai modelli (potresti trovarti anche il blu e il viola)*
 
 ```
 
