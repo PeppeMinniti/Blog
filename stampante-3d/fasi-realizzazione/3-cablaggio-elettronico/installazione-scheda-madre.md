@@ -14,7 +14,9 @@ Driver: 8× slot per driver stepper
 
 ## Immagini
 
-![Pinout Octopus Pro](../../media/BIGTREETECH%20Octopus%20Pro%20V1.1-Pin.jpg)
+<div class="thumbnail-gallery">
+  <img src="../../media/BIGTREETECH Octopus Pro V1.1-Pin.jpg" class="project-thumbnail">
+</div>
 
 <!-- Aggiungere foto installazione -->
 <!-- ![Box elettronica](../../media/elettronica/box-elettronica.jpg) -->
