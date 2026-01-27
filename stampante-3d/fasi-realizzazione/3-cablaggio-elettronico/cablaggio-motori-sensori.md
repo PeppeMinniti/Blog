@@ -241,7 +241,7 @@ Asse Y (mobile):
 Sistema etichettatura:
   - Motori: "MOTOR_X", "MOTOR_Y1", "MOTOR_Z1"
   - Endstop: "END_X", "END_Y"
-  - Sensori: "TEMP_HE", "TEMP_BED"
+  - Sensori: "TEMP_HE", "BLTOUCH", "RUNOUT"
   - Alimentazione: "PSU24V_MAIN", "PSU36V_MOTORS"
 
 Strumenti:
