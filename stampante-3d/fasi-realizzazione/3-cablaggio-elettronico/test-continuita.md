@@ -137,10 +137,9 @@ Movimento pin:
   - All'accensione: extend/retract 2 volte (self-test)
   - LED rosso lampeggiante: OK
   - LED rosso fisso: ERRORE
-
-*I colori possono essere diversi in base ai modelli (potresti trovarti anche il blu e il viola)*
-
 ```
+_I colori possono essere diversi in base ai modelli (potresti trovarti anche il blu e il viola)_
+
 
 ## Test Driver Stepper
 
