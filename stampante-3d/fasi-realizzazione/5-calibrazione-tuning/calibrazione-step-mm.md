@@ -15,9 +15,9 @@ Calibrazione della precisione di movimento degli assi X, Y, Z ed estrusore. In K
 
 ## Immagini
 
-<!-- Inserire foto calibrazione -->
-<!-- ![Calibration cube](../../media/calibrazione/calibration-cube.jpg) -->
-<!-- ![Misura calibro](../../media/calibrazione/misura-calibro.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/calibrazione/pid.jpg" class="project-thumbnail">
+</div>
 
 ## Rotation Distance vs Steps/mm
 
