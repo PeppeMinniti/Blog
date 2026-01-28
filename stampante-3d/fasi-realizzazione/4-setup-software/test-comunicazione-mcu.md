@@ -430,7 +430,8 @@ Debug valore fisso:
 - [ ] Nessun errore in klippy.log
 - [ ] Log test compilato
 
+---
 
 |       |
 |:-----:|
-| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) |
+| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) - [Torna alla Home](../../../README.md) |
