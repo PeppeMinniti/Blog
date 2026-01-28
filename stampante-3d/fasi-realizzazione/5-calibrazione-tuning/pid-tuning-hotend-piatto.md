@@ -9,6 +9,10 @@ title: "PID Tuning Hotend e Piatto"
 #### Cosa è il P.I.D. ? - Di seguito il modo più semplice che ho trovato per capirlo e poterlo utilizzare con consapevolezza
 Il PID (Proportional-Integral-Derivative) è un tipo di controllo utilizzato in svariate applicazioni per mantenere un valore desiderato, ad esempio: la temperatura di un sistema di riscaldamento, la tensione di un sistema di alimentazione, la velocità di un motore.
 
+<div class="thumbnail-gallery">
+  <img src="../media/calibrazione/pid.jpg" class="project-thumbnail">
+</div>
+
 Il PID utilizza tre componenti per calcolare l’errore che si viene a creare tra il valore desiderato (valore nominale) e il valore attuale (valore misurato) e regolare di conseguenza l’output per minimizzare tale errore. Questi componenti sono:
 
 1. **Proporzionale (P)**: come suggerisce il nome, questa componente produce un output proporzionale all’errore presente. Più grande è l’errore, più grande sarà l’output.
@@ -36,14 +40,6 @@ Calibrazione del controllo PID (Proportional-Integral-Derivative) per hotend e p
 - Riduce overshoot (pericoloso per hotend)
 - Minimizza undershoot (attese più lunghe)
 - Ottimizza consumo energetico
-
-## Immagini
-
-<div class="thumbnail-gallery">
-  <img src="../media/calibrazione/pid.jpg" class="project-thumbnail">
-</div>
-
-## Teoria PID
 
 ### Componenti PID
 
