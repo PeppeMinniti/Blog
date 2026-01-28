@@ -16,9 +16,9 @@ Calibrazione del controllo PID (Proportional-Integral-Derivative) per hotend e p
 
 ## Immagini
 
-<!-- Inserire grafici PID prima/dopo -->
-<!-- ![Grafico temperatura senza PID](../../media/calibrazione/temp-no-pid.jpg) -->
-<!-- ![Grafico temperatura con PID](../../media/calibrazione/temp-with-pid.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/calibrazione/pid.jpg" class="project-thumbnail">
+</div>
 
 ## Teoria PID
 
