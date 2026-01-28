@@ -7,7 +7,7 @@ title: "PID Tuning Hotend e Piatto"
 ## Descrizione
 
 #### COSA È IL P.I.D.?
-Il PID (Proportional-Integral-Derivative) è un tipo di controllo utilizzato in svariate applicazioni per mantenere un valore desiderato, ad esempio: la temperatura di un sistema di riscaldamento, la tensione di un sistema di alimentazione, la velocità di un motore, il valore di cloro dosato in una piscina.
+Il PID (Proportional-Integral-Derivative) è un tipo di controllo utilizzato in svariate applicazioni per mantenere un valore desiderato, ad esempio: la temperatura di un sistema di riscaldamento, la tensione di un sistema di alimentazione, la velocità di un motore.
 
 Il PID utilizza tre componenti per calcolare l’errore che si viene a creare tra il valore desiderato (valore nominale) e il valore attuale (valore misurato) e regolare di conseguenza l’output per minimizzare tale errore. Questi componenti sono:
 
