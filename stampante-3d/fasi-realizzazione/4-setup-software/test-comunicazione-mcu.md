@@ -10,8 +10,9 @@ Verifica della comunicazione tra Raspberry Pi (host Klipper) e scheda Octopus Pr
 
 **Prerequisiti:** Klipper installato, printer.cfg configurato, Mainsail accessibile.
 
+<!--
 ## Immagini
-
+-->
 <!-- Inserire screenshot test console -->
 <!-- ![Console test MCU](../../media/software/test-mcu.jpg) -->
 
@@ -142,6 +143,7 @@ Output atteso (temperatura ambiente ~25°C):
 ### 7. Test Riscaldamento Controllato
 
 **⚠️ ATTENZIONE:** Eseguire con cautela, non lasciare incustodito!
+##### _Ignorare test bed se si utilizza controller esterno per riscaldamento piatto_
 
 ```yaml
 # Test hotend (temperatura bassa per sicurezza)
@@ -171,6 +173,7 @@ Spegnimento:
 ## Test Motori Stepper
 
 ### 8. Test Driver Stepper
+##### _Da ignorare se gli stepper X e Estrusore sono collegati tramite STEP/DIR_
 
 ```yaml
 # Verificare driver attivi e temperatura
@@ -381,7 +384,6 @@ Debug valore fisso:
 
 ```markdown
 # Test Comunicazione MCU - Stampante 3D
-Data: ___/___/______
 
 ## Connessione Base
 - [ ] STATUS: ready
@@ -409,8 +411,6 @@ Data: ___/___/______
 
 ## Problemi Riscontrati
 - Nessuno / [Descrizione]
-
-Firma: ________________
 ```
 
 ## Checklist
@@ -432,4 +432,4 @@ Firma: ________________
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)

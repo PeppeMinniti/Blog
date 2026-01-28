@@ -18,10 +18,9 @@ Caratteristiche:
 
 ## Immagini
 
-![Interfaccia Web Piatto](../../media/Interfaccia%20web%20piatto.JPG)
-
-<!-- Aggiungere screenshot dashboard -->
-<!-- ![Mainsail dashboard](../../media/software/mainsail-main.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/setup-software/mainsail-home.JPG" class="project-thumbnail">
+</div>
 
 ## Accesso Interfaccia
 
@@ -150,6 +149,7 @@ Card opzionali:
 ```
 
 ### 5. Grafici Temperatura
+##### _Tutti i riferimenti a Bed e Hotbed sono da considerarsi ininfluenti nel caso di controller esterno del piatto_
 
 ```yaml
 Temperature Chart → Settings:
@@ -463,4 +463,4 @@ Soluzioni:
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
