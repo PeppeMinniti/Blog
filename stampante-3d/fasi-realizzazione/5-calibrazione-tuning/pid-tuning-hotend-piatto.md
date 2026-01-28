@@ -6,6 +6,29 @@ title: "PID Tuning Hotend e Piatto"
 
 ## Descrizione
 
+#### COSA È IL P.I.D.?
+Il PID (Proportional-Integral-Derivative) è un tipo di controllo utilizzato in svariate applicazioni per mantenere un valore desiderato, ad esempio: la temperatura di un sistema di riscaldamento, la tensione di un sistema di alimentazione, la velocità di un motore, il valore di cloro dosato in una piscina.
+
+Il PID utilizza tre componenti per calcolare l’errore che si viene a creare tra il valore desiderato (valore nominale) e il valore attuale (valore misurato) e regolare di conseguenza l’output per minimizzare tale errore. Questi componenti sono:
+
+1. **Proporzionale (P)**: come suggerisce il nome, questa componente produce un output proporzionale all’errore presente. Più grande è l’errore, più grande sarà l’output.
+
+2. **Integrale (I)**: questa componente tiene conto dell’errore accumulato nel tempo, producendo un output più grande se l’errore persiste a lungo. Questo componente aiuta a compensare gli errori a lungo termine.
+
+3. **Derivativo (D)**: questa componente tiene conto della velocità di variazione dell’errore, producendo un output più grande se l’errore cambia rapidamente. In pratica si reagirà più velocemente ad una variazione più repentina e viceversa.
+
+_L’utilizzo corretto dei tre componenti di controllo (P, I o D) può consentire di raggiungere molto prima il valore desiderato della variabile (set point) soprattutto in caso di forti variazioni nel tempo e nel valore assoluto del parametro._
+_Utilizzando l’analogia dell’automobile che deve percorrere una strada in salita, possiamo immaginare come il guidatore si comporterà a seconda che si tratti di una semplice collina, di un altipiano in ascesa continua o di un improvviso cavalcavia._
+
+_(P) Quando guidiamo un’auto ed arriviamo a percorrere una collina improvvisa, infatti, dovremo premere l’acceleratore tanto quanto basta per contrastare la decelerazione che la pendenza causa all’automobile. Maggiore sarà la pendenza, maggiore sarà la nostra pressione sul pedale dell’acceleratore; minore la pendenza, minore sarà il bisogno di imprimere tale forza sul pedale, fino alla situazione di pianura e poi discesa in cui potremo alzare il piede dall’acceleratore: questa è la componente Proporzionale._
+
+_(I) La componente Integrale invece si spiega facilmente pensando alla continua pressione che imprimiamo all’acceleratore in modo tale da mantenere una velocità costante: se ci troviamo a salire un altipiano in ascesa continua, dovremo mantenere per tutto il viaggio una pressione maggiore rispetto a quella minima, ma pur sempre presente, impressa al pedale dell’acceleratore se percorriamo una strada in pianura. L’auto, si sa, tende a rallentare se non le si dà un minimo di gas; dunque, la componente Integrale è la nostra continua e costante pressione dell’acceleratore._
+
+_(D) Se però nel nostro viaggio ci imbattiamo improvvisamente in un cavalcavia, ecco che la nostra automobile tenderà a rallentare in pochi istanti e ci troveremo d’istinto a premere velocemente e a fondo l’acceleratore nel momento stesso in cui imbocchiamo la salita per tentare di contrastare la diminuzione di velocità. La componente Derivativa, quindi, rispecchia la velocità di variazione dell’errore, che nel nostro caso è piuttosto improvvisa dunque elevata, e reagisce con un output altrettanto grande (la pressione a fondo del pedale)._
+
+
+## Applicazione nel nostro caso...
+
 Calibrazione del controllo PID (Proportional-Integral-Derivative) per hotend e piatto riscaldato. Il PID ottimizza il controllo temperatura eliminando oscillazioni e riducendo overshoot.
 
 **Perché è importante:**
