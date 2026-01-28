@@ -277,7 +277,7 @@ stealthchop_threshold: 0
 
 ## Configurazione Riscaldamento
 
-### Piatto Riscaldato  
+### Piatto Riscaldato
 ##### _(si può anche tralasciare questa sezione se si utilizza, come da progetto, il controller esterno)_
 
 ```ini
