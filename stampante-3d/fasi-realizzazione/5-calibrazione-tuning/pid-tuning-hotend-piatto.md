@@ -94,6 +94,10 @@ plt.grid()
 plt.title("Confronto Controllo Temperatura")
 # plt.savefig("pid_comparison.png")
 ```
+<div class="thumbnail-gallery">
+  <img src="../media/calibrazione/pid_comparison.png" class="project-thumbnail">
+</div>
+
 
 ## PID Tuning Hotend
 
