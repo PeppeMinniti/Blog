@@ -430,7 +430,6 @@ Debug valore fisso:
 - [ ] Nessun errore in klippy.log
 - [ ] Log test compilato
 
----
 
 |       |
 |:-----:|
