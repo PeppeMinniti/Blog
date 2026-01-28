@@ -497,4 +497,6 @@ RESTART
 
 ---
 
-[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
+|       |
+|:-----:|
+| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) - [Torna alla Home](../../../README.md) |

@@ -61,4 +61,6 @@ I calcoli sono basati su:
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto Stampante 3D](../../index.md)
+|       |
+|:-----:|
+| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) - [Torna alla Home](../../../README.md) |

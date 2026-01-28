@@ -120,4 +120,6 @@ TOTALE:          1.550-2.110€
 
 ---
 
-[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
+|       |
+|:-----:|
+| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) - [Torna alla Home](../../../README.md) |

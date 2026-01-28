@@ -384,17 +384,15 @@ Vuoi scaricare tutti i file in un colpo solo?
 
 ## 🔗 Navigazione
 
-<div style="display: flex; justify-content: space-between; margin-top: 40px; flex-wrap: wrap; gap: 15px;">
-  <a href="../" style="text-decoration: none;">⬅️ Torna alle Fasi di Realizzazione</a>
-  <a href="../../" style="text-decoration: none;">🏠 Torna al Progetto Stampante 3D</a>
-  <a href="../../../" style="text-decoration: none;">📂 Portfolio Progetti</a>
-</div>
-
----
-
 <div style="background: var(--bg-tertiary); padding: 20px; border-radius: 8px; margin-top: 40px; text-align: center;">
   <p style="margin: 0; color: var(--text-secondary);">
     💡 <strong>Hai bisogno di modifiche ai modelli?</strong><br>
     Contattami per consulenze di progettazione CAD custom: <a href="mailto:peppe.minniti@gmail.com">peppe.minniti@gmail.com</a>
   </p>
 </div>
+
+---
+
+|       |
+|:-----:|
+| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) - [Torna alla Home](../../../README.md) |

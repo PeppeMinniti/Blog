@@ -83,4 +83,6 @@ print(f"Limite L/500: {L/500:.2f} mm")
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
+|       |
+|:-----:|
+| [Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md) - [Torna alla Home](../../../README.md) |
