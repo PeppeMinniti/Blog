@@ -135,7 +135,8 @@ homing_positive_dir: false
 # Homing verso min (X=0)
 ```
 
-### TMC2209 per Asse X _(nel caso di comunicazione uart e non step/dir)_
+### TMC2209 per Asse X
+##### _(nel caso di comunicazione uart e non step/dir)_
 
 ```ini
 [tmc2209 stepper_x]
@@ -258,7 +259,8 @@ pressure_advance: 0.055
 pressure_advance_smooth_time: 0.040
 ```
 
-### TMC2209 per Estrusore _(nel caso di comunicazione uart e non step/dir)_
+### TMC2209 per Estrusore
+##### _(nel caso di comunicazione uart e non step/dir)_
 
 ```ini
 [tmc2209 extruder]
@@ -275,7 +277,8 @@ stealthchop_threshold: 0
 
 ## Configurazione Riscaldamento
 
-### Piatto Riscaldato
+### Piatto Riscaldato  
+##### _(si può anche tralasciare questa sezione se si utilizza, come da progetto, il controller esterno)_
 
 ```ini
 [heater_bed]
