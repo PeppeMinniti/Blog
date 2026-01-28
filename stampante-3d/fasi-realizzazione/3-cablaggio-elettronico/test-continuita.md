@@ -14,8 +14,8 @@ Test fondamentali da eseguire PRIMA della prima accensione per evitare danni ai 
 
 <div class="thumbnail-gallery">
   <img src="../media/elettronica/multimetro.jpg" class="project-thumbnail">
-  <img src="../media/elettronica/tester-continuità.jpg" class="project-thumbnail">
   <img src="../media/elettronica/termocamera.jpg" class="project-thumbnail">
+  <img src="../media/elettronica/alimentatore.jpg" class="project-thumbnail">
 </div>
 
 ## Strumenti Necessari
