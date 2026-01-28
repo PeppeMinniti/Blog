@@ -260,8 +260,6 @@ Test hotend heater:
 - [ ] Temperature leggibili
 - [ ] Motori movimento OK
 - [ ] Heater test 50°C OK
-
-Firma: ________________
 ```
 
 ## Checklist Finale

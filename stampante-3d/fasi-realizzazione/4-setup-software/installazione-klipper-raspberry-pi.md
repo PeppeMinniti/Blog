@@ -17,8 +17,9 @@ Vantaggi Klipper:
 
 ## Immagini
 
-<!-- Inserire screenshot interfaccia -->
-<!-- ![Mainsail dashboard](../../media/software/mainsail-dashboard.jpg) -->
+<div class="thumbnail-gallery">
+  <img src="../media/setup-software/mainsail-home.JPG" class="project-thumbnail">
+</div>
 
 ## Prerequisiti
 
@@ -377,4 +378,4 @@ git push -u origin main
 
 ---
 
-[← Torna alle Fasi di Realizzazione](../README.md) | [Torna al Progetto](../../index.md)
+[Torna alle Fasi di Realizzazione](../README.md) - [Torna al Progetto](../../index.md)
